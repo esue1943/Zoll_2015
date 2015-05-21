@@ -30,7 +30,7 @@ using System.Data.OleDb;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace BatteryTest2
+namespace Zoll_2015
 {
 	/// <summary>
 	/// Summary description for Form1.
@@ -240,8 +240,8 @@ namespace BatteryTest2
 			//     MccDaq.ErrorHandling.StopAll   :if an error is encountered, the program will stop
 
 //	Comment the following 2 lines out if no hardware is attached		
-			//ULStat1 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
-			//ULStat2 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
+			ULStat1 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
+			ULStat2 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
 		
 			// Create a new MccBoard object for Board 1 & 2
 			DaqBoard1 = new MccDaq.MccBoard(1);
@@ -330,1216 +330,1221 @@ namespace BatteryTest2
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(Zoll_2015));
-			this.lblBattery1 = new System.Windows.Forms.Label();
-			this.lblSerialNums = new System.Windows.Forms.Label();
-			this.lblBattery2 = new System.Windows.Forms.Label();
-			this.lblBattery3 = new System.Windows.Forms.Label();
-			this.lblBattery4 = new System.Windows.Forms.Label();
-			this.lblBattery5 = new System.Windows.Forms.Label();
-			this.lblBattery6 = new System.Windows.Forms.Label();
-			this.lblBattery7 = new System.Windows.Forms.Label();
-			this.lblBattery8 = new System.Windows.Forms.Label();
-			this.lblSerNum1 = new System.Windows.Forms.Label();
-			this.lblSerNum2 = new System.Windows.Forms.Label();
-			this.lblSerNum3 = new System.Windows.Forms.Label();
-			this.lblSerNum4 = new System.Windows.Forms.Label();
-			this.lblSerNum5 = new System.Windows.Forms.Label();
-			this.lblSerNum6 = new System.Windows.Forms.Label();
-			this.lblSerNum7 = new System.Windows.Forms.Label();
-			this.lblSerNum8 = new System.Windows.Forms.Label();
-			this.lblOcVoltage = new System.Windows.Forms.Label();
-			this.lblOcV1 = new System.Windows.Forms.Label();
-			this.lblOcV2 = new System.Windows.Forms.Label();
-			this.lblOcV3 = new System.Windows.Forms.Label();
-			this.lblOcV4 = new System.Windows.Forms.Label();
-			this.lblOcV5 = new System.Windows.Forms.Label();
-			this.lblOcV6 = new System.Windows.Forms.Label();
-			this.lblOcV7 = new System.Windows.Forms.Label();
-			this.lblOcV8 = new System.Windows.Forms.Label();
-			this.lblLoadV = new System.Windows.Forms.Label();
-			this.lblLoadV1 = new System.Windows.Forms.Label();
-			this.lblLoadV2 = new System.Windows.Forms.Label();
-			this.lblLoadV3 = new System.Windows.Forms.Label();
-			this.lblLoadV4 = new System.Windows.Forms.Label();
-			this.lblLoadV5 = new System.Windows.Forms.Label();
-			this.lblLoadV6 = new System.Windows.Forms.Label();
-			this.lblLoadV7 = new System.Windows.Forms.Label();
-			this.lblLoadV8 = new System.Windows.Forms.Label();
-			this.lblNoLoadV = new System.Windows.Forms.Label();
-			this.lblNoLoadV1 = new System.Windows.Forms.Label();
-			this.lblNoLoadV2 = new System.Windows.Forms.Label();
-			this.lblNoLoadV3 = new System.Windows.Forms.Label();
-			this.lblNoLoadV4 = new System.Windows.Forms.Label();
-			this.lblNoLoadV5 = new System.Windows.Forms.Label();
-			this.lblNoLoadV6 = new System.Windows.Forms.Label();
-			this.lblNoLoadV7 = new System.Windows.Forms.Label();
-			this.lblNoLoadV8 = new System.Windows.Forms.Label();
-			this.lblID = new System.Windows.Forms.Label();
-			this.lblID1 = new System.Windows.Forms.Label();
-			this.lblID2 = new System.Windows.Forms.Label();
-			this.lblID3 = new System.Windows.Forms.Label();
-			this.lblID4 = new System.Windows.Forms.Label();
-			this.lblID5 = new System.Windows.Forms.Label();
-			this.lblID6 = new System.Windows.Forms.Label();
-			this.lblID7 = new System.Windows.Forms.Label();
-			this.lblID8 = new System.Windows.Forms.Label();
-			this.lblResult = new System.Windows.Forms.Label();
-			this.lblResult1 = new System.Windows.Forms.Label();
-			this.lblResult2 = new System.Windows.Forms.Label();
-			this.lblResult3 = new System.Windows.Forms.Label();
-			this.lblResult4 = new System.Windows.Forms.Label();
-			this.lblResult5 = new System.Windows.Forms.Label();
-			this.lblResult6 = new System.Windows.Forms.Label();
-			this.lblResult7 = new System.Windows.Forms.Label();
-			this.lblResult8 = new System.Windows.Forms.Label();
-			this.lblEnterSerNum = new System.Windows.Forms.Label();
-			this.txtStartSerNum = new System.Windows.Forms.TextBox();
-			this.btnAccept = new System.Windows.Forms.Button();
-			this.btnStart = new System.Windows.Forms.Button();
-			this.btnStop = new System.Windows.Forms.Button();
-			this.timer1 = new System.Windows.Forms.Timer(this.components);
-			this.lblElapsed = new System.Windows.Forms.Label();
-			this.lblElapsedTime = new System.Windows.Forms.Label();
-			this.lblStartDateTime = new System.Windows.Forms.Label();
-			this.lblStopDateTime = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.lblTestTitle = new System.Windows.Forms.Label();
-			this.btnQuit = new System.Windows.Forms.Button();
-			this.lblStartTime = new System.Windows.Forms.Label();
-			this.lblTestComplete = new System.Windows.Forms.Label();
-			this.txtLotNum = new System.Windows.Forms.TextBox();
-			this.lblLotNum = new System.Windows.Forms.Label();
-			this.lblFileName = new System.Windows.Forms.Label();
-			this.btnSelectFile = new System.Windows.Forms.Button();
-			this.txtPoNumbr = new System.Windows.Forms.TextBox();
-			this.lblPoNumbr = new System.Windows.Forms.Label();
-			this.txtCellCode = new System.Windows.Forms.TextBox();
-			this.lblCellCode = new System.Windows.Forms.Label();
-			this.lblPackSerNums = new System.Windows.Forms.Label();
-			this.txtPackSerNum1 = new System.Windows.Forms.TextBox();
-			this.txtPackSerNum2 = new System.Windows.Forms.TextBox();
-			this.txtPackSerNum3 = new System.Windows.Forms.TextBox();
-			this.txtPackSerNum4 = new System.Windows.Forms.TextBox();
-			this.txtPackSerNum5 = new System.Windows.Forms.TextBox();
-			this.txtPackSerNum6 = new System.Windows.Forms.TextBox();
-			this.txtPackSerNum7 = new System.Windows.Forms.TextBox();
-			this.txtPackSerNum8 = new System.Windows.Forms.TextBox();
-			this.chkIDRes = new System.Windows.Forms.CheckBox();
-			this.chkIDResOnly = new System.Windows.Forms.CheckBox();
-			this.SuspendLayout();
-			// 
-			// lblBattery1
-			// 
-			this.lblBattery1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblBattery1.Location = new System.Drawing.Point(24, 264);
-			this.lblBattery1.Name = "lblBattery1";
-			this.lblBattery1.Size = new System.Drawing.Size(80, 16);
-			this.lblBattery1.TabIndex = 0;
-			this.lblBattery1.Text = "Battery 1  -";
-			this.lblBattery1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblSerialNums
-			// 
-			this.lblSerialNums.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblSerialNums.Location = new System.Drawing.Point(111, 216);
-			this.lblSerialNums.Name = "lblSerialNums";
-			this.lblSerialNums.Size = new System.Drawing.Size(112, 32);
-			this.lblSerialNums.TabIndex = 19;
-			this.lblSerialNums.Text = "Pack Serial Number";
-			this.lblSerialNums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblBattery2
-			// 
-			this.lblBattery2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblBattery2.Location = new System.Drawing.Point(24, 296);
-			this.lblBattery2.Name = "lblBattery2";
-			this.lblBattery2.Size = new System.Drawing.Size(80, 16);
-			this.lblBattery2.TabIndex = 29;
-			this.lblBattery2.Text = "Battery 2  -";
-			this.lblBattery2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblBattery3
-			// 
-			this.lblBattery3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblBattery3.Location = new System.Drawing.Point(24, 328);
-			this.lblBattery3.Name = "lblBattery3";
-			this.lblBattery3.Size = new System.Drawing.Size(80, 16);
-			this.lblBattery3.TabIndex = 30;
-			this.lblBattery3.Text = "Battery 3  -";
-			this.lblBattery3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblBattery4
-			// 
-			this.lblBattery4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblBattery4.Location = new System.Drawing.Point(24, 360);
-			this.lblBattery4.Name = "lblBattery4";
-			this.lblBattery4.Size = new System.Drawing.Size(80, 16);
-			this.lblBattery4.TabIndex = 31;
-			this.lblBattery4.Text = "Battery 4  -";
-			this.lblBattery4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblBattery5
-			// 
-			this.lblBattery5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblBattery5.Location = new System.Drawing.Point(24, 392);
-			this.lblBattery5.Name = "lblBattery5";
-			this.lblBattery5.Size = new System.Drawing.Size(80, 16);
-			this.lblBattery5.TabIndex = 32;
-			this.lblBattery5.Text = "Battery 5  -";
-			this.lblBattery5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblBattery6
-			// 
-			this.lblBattery6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblBattery6.Location = new System.Drawing.Point(24, 424);
-			this.lblBattery6.Name = "lblBattery6";
-			this.lblBattery6.Size = new System.Drawing.Size(80, 16);
-			this.lblBattery6.TabIndex = 33;
-			this.lblBattery6.Text = "Battery 6  -";
-			this.lblBattery6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblBattery7
-			// 
-			this.lblBattery7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblBattery7.Location = new System.Drawing.Point(24, 456);
-			this.lblBattery7.Name = "lblBattery7";
-			this.lblBattery7.Size = new System.Drawing.Size(80, 16);
-			this.lblBattery7.TabIndex = 34;
-			this.lblBattery7.Text = "Battery 7  -";
-			this.lblBattery7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblBattery8
-			// 
-			this.lblBattery8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblBattery8.Location = new System.Drawing.Point(24, 488);
-			this.lblBattery8.Name = "lblBattery8";
-			this.lblBattery8.Size = new System.Drawing.Size(80, 16);
-			this.lblBattery8.TabIndex = 35;
-			this.lblBattery8.Text = "Battery 8  -";
-			this.lblBattery8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblSerNum1
-			// 
-			this.lblSerNum1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblSerNum1.ForeColor = System.Drawing.Color.Blue;
-			this.lblSerNum1.Location = new System.Drawing.Point(111, 264);
-			this.lblSerNum1.Name = "lblSerNum1";
-			this.lblSerNum1.Size = new System.Drawing.Size(112, 16);
-			this.lblSerNum1.TabIndex = 36;
-			this.lblSerNum1.Text = "Serial Number 1";
-			this.lblSerNum1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblSerNum2
-			// 
-			this.lblSerNum2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblSerNum2.ForeColor = System.Drawing.Color.Blue;
-			this.lblSerNum2.Location = new System.Drawing.Point(111, 296);
-			this.lblSerNum2.Name = "lblSerNum2";
-			this.lblSerNum2.Size = new System.Drawing.Size(112, 16);
-			this.lblSerNum2.TabIndex = 37;
-			this.lblSerNum2.Text = "Serial Number 2";
-			this.lblSerNum2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblSerNum3
-			// 
-			this.lblSerNum3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblSerNum3.ForeColor = System.Drawing.Color.Blue;
-			this.lblSerNum3.Location = new System.Drawing.Point(111, 328);
-			this.lblSerNum3.Name = "lblSerNum3";
-			this.lblSerNum3.Size = new System.Drawing.Size(112, 16);
-			this.lblSerNum3.TabIndex = 38;
-			this.lblSerNum3.Text = "Serial Number 3";
-			this.lblSerNum3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblSerNum4
-			// 
-			this.lblSerNum4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblSerNum4.ForeColor = System.Drawing.Color.Blue;
-			this.lblSerNum4.Location = new System.Drawing.Point(111, 360);
-			this.lblSerNum4.Name = "lblSerNum4";
-			this.lblSerNum4.Size = new System.Drawing.Size(112, 16);
-			this.lblSerNum4.TabIndex = 39;
-			this.lblSerNum4.Text = "Serial Number 4";
-			this.lblSerNum4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblSerNum5
-			// 
-			this.lblSerNum5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblSerNum5.ForeColor = System.Drawing.Color.Blue;
-			this.lblSerNum5.Location = new System.Drawing.Point(111, 392);
-			this.lblSerNum5.Name = "lblSerNum5";
-			this.lblSerNum5.Size = new System.Drawing.Size(112, 16);
-			this.lblSerNum5.TabIndex = 40;
-			this.lblSerNum5.Text = "Serial Number 5";
-			this.lblSerNum5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblSerNum6
-			// 
-			this.lblSerNum6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblSerNum6.ForeColor = System.Drawing.Color.Blue;
-			this.lblSerNum6.Location = new System.Drawing.Point(111, 424);
-			this.lblSerNum6.Name = "lblSerNum6";
-			this.lblSerNum6.Size = new System.Drawing.Size(112, 16);
-			this.lblSerNum6.TabIndex = 41;
-			this.lblSerNum6.Text = "Serial Number 6";
-			this.lblSerNum6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblSerNum7
-			// 
-			this.lblSerNum7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblSerNum7.ForeColor = System.Drawing.Color.Blue;
-			this.lblSerNum7.Location = new System.Drawing.Point(111, 456);
-			this.lblSerNum7.Name = "lblSerNum7";
-			this.lblSerNum7.Size = new System.Drawing.Size(112, 16);
-			this.lblSerNum7.TabIndex = 42;
-			this.lblSerNum7.Text = "Serial Number 7";
-			this.lblSerNum7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblSerNum8
-			// 
-			this.lblSerNum8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblSerNum8.ForeColor = System.Drawing.Color.Blue;
-			this.lblSerNum8.Location = new System.Drawing.Point(111, 488);
-			this.lblSerNum8.Name = "lblSerNum8";
-			this.lblSerNum8.Size = new System.Drawing.Size(112, 16);
-			this.lblSerNum8.TabIndex = 43;
-			this.lblSerNum8.Text = "Serial Number 8";
-			this.lblSerNum8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblOcVoltage
-			// 
-			this.lblOcVoltage.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblOcVoltage.Location = new System.Drawing.Point(379, 216);
-			this.lblOcVoltage.Name = "lblOcVoltage";
-			this.lblOcVoltage.Size = new System.Drawing.Size(112, 32);
-			this.lblOcVoltage.TabIndex = 52;
-			this.lblOcVoltage.Text = "Pre-Test Voltage  > 11.0 VDC";
-			this.lblOcVoltage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblOcV1
-			// 
-			this.lblOcV1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblOcV1.ForeColor = System.Drawing.Color.Blue;
-			this.lblOcV1.Location = new System.Drawing.Point(379, 264);
-			this.lblOcV1.Name = "lblOcV1";
-			this.lblOcV1.Size = new System.Drawing.Size(112, 16);
-			this.lblOcV1.TabIndex = 44;
-			this.lblOcV1.Text = "OC Voltage 1";
-			this.lblOcV1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblOcV2
-			// 
-			this.lblOcV2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblOcV2.ForeColor = System.Drawing.Color.Blue;
-			this.lblOcV2.Location = new System.Drawing.Point(379, 296);
-			this.lblOcV2.Name = "lblOcV2";
-			this.lblOcV2.Size = new System.Drawing.Size(112, 16);
-			this.lblOcV2.TabIndex = 45;
-			this.lblOcV2.Text = "OC Voltage 2";
-			this.lblOcV2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblOcV3
-			// 
-			this.lblOcV3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblOcV3.ForeColor = System.Drawing.Color.Blue;
-			this.lblOcV3.Location = new System.Drawing.Point(379, 328);
-			this.lblOcV3.Name = "lblOcV3";
-			this.lblOcV3.Size = new System.Drawing.Size(112, 16);
-			this.lblOcV3.TabIndex = 46;
-			this.lblOcV3.Text = "OC Voltage 3";
-			this.lblOcV3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblOcV4
-			// 
-			this.lblOcV4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblOcV4.ForeColor = System.Drawing.Color.Blue;
-			this.lblOcV4.Location = new System.Drawing.Point(379, 360);
-			this.lblOcV4.Name = "lblOcV4";
-			this.lblOcV4.Size = new System.Drawing.Size(112, 16);
-			this.lblOcV4.TabIndex = 47;
-			this.lblOcV4.Text = "OC Voltage 4";
-			this.lblOcV4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblOcV5
-			// 
-			this.lblOcV5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblOcV5.ForeColor = System.Drawing.Color.Blue;
-			this.lblOcV5.Location = new System.Drawing.Point(379, 392);
-			this.lblOcV5.Name = "lblOcV5";
-			this.lblOcV5.Size = new System.Drawing.Size(112, 16);
-			this.lblOcV5.TabIndex = 48;
-			this.lblOcV5.Text = "OC Voltage 5";
-			this.lblOcV5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblOcV6
-			// 
-			this.lblOcV6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblOcV6.ForeColor = System.Drawing.Color.Blue;
-			this.lblOcV6.Location = new System.Drawing.Point(379, 424);
-			this.lblOcV6.Name = "lblOcV6";
-			this.lblOcV6.Size = new System.Drawing.Size(112, 16);
-			this.lblOcV6.TabIndex = 49;
-			this.lblOcV6.Text = "OC Voltage 6";
-			this.lblOcV6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblOcV7
-			// 
-			this.lblOcV7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblOcV7.ForeColor = System.Drawing.Color.Blue;
-			this.lblOcV7.Location = new System.Drawing.Point(379, 456);
-			this.lblOcV7.Name = "lblOcV7";
-			this.lblOcV7.Size = new System.Drawing.Size(112, 16);
-			this.lblOcV7.TabIndex = 50;
-			this.lblOcV7.Text = "OC Voltage 7";
-			this.lblOcV7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblOcV8
-			// 
-			this.lblOcV8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblOcV8.ForeColor = System.Drawing.Color.Blue;
-			this.lblOcV8.Location = new System.Drawing.Point(379, 488);
-			this.lblOcV8.Name = "lblOcV8";
-			this.lblOcV8.Size = new System.Drawing.Size(112, 16);
-			this.lblOcV8.TabIndex = 51;
-			this.lblOcV8.Text = "OC Voltage 8";
-			this.lblOcV8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblLoadV
-			// 
-			this.lblLoadV.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblLoadV.Location = new System.Drawing.Point(513, 216);
-			this.lblLoadV.Name = "lblLoadV";
-			this.lblLoadV.Size = new System.Drawing.Size(112, 32);
-			this.lblLoadV.TabIndex = 61;
-			this.lblLoadV.Text = "6A Load Voltage > 9.0 VDC";
-			this.lblLoadV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblLoadV1
-			// 
-			this.lblLoadV1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblLoadV1.ForeColor = System.Drawing.Color.Blue;
-			this.lblLoadV1.Location = new System.Drawing.Point(513, 264);
-			this.lblLoadV1.Name = "lblLoadV1";
-			this.lblLoadV1.Size = new System.Drawing.Size(112, 16);
-			this.lblLoadV1.TabIndex = 53;
-			this.lblLoadV1.Text = "Load Voltage 1";
-			this.lblLoadV1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblLoadV2
-			// 
-			this.lblLoadV2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblLoadV2.ForeColor = System.Drawing.Color.Blue;
-			this.lblLoadV2.Location = new System.Drawing.Point(513, 296);
-			this.lblLoadV2.Name = "lblLoadV2";
-			this.lblLoadV2.Size = new System.Drawing.Size(112, 16);
-			this.lblLoadV2.TabIndex = 54;
-			this.lblLoadV2.Text = "Load Voltage 2";
-			this.lblLoadV2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblLoadV3
-			// 
-			this.lblLoadV3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblLoadV3.ForeColor = System.Drawing.Color.Blue;
-			this.lblLoadV3.Location = new System.Drawing.Point(513, 328);
-			this.lblLoadV3.Name = "lblLoadV3";
-			this.lblLoadV3.Size = new System.Drawing.Size(112, 16);
-			this.lblLoadV3.TabIndex = 55;
-			this.lblLoadV3.Text = "Load Voltage 3";
-			this.lblLoadV3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblLoadV4
-			// 
-			this.lblLoadV4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblLoadV4.ForeColor = System.Drawing.Color.Blue;
-			this.lblLoadV4.Location = new System.Drawing.Point(513, 360);
-			this.lblLoadV4.Name = "lblLoadV4";
-			this.lblLoadV4.Size = new System.Drawing.Size(112, 16);
-			this.lblLoadV4.TabIndex = 56;
-			this.lblLoadV4.Text = "Load Voltage 4";
-			this.lblLoadV4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblLoadV5
-			// 
-			this.lblLoadV5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblLoadV5.ForeColor = System.Drawing.Color.Blue;
-			this.lblLoadV5.Location = new System.Drawing.Point(513, 392);
-			this.lblLoadV5.Name = "lblLoadV5";
-			this.lblLoadV5.Size = new System.Drawing.Size(112, 16);
-			this.lblLoadV5.TabIndex = 57;
-			this.lblLoadV5.Text = "Load Voltage 5";
-			this.lblLoadV5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblLoadV6
-			// 
-			this.lblLoadV6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblLoadV6.ForeColor = System.Drawing.Color.Blue;
-			this.lblLoadV6.Location = new System.Drawing.Point(513, 424);
-			this.lblLoadV6.Name = "lblLoadV6";
-			this.lblLoadV6.Size = new System.Drawing.Size(112, 16);
-			this.lblLoadV6.TabIndex = 58;
-			this.lblLoadV6.Text = "Load Voltage 6";
-			this.lblLoadV6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblLoadV7
-			// 
-			this.lblLoadV7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblLoadV7.ForeColor = System.Drawing.Color.Blue;
-			this.lblLoadV7.Location = new System.Drawing.Point(513, 456);
-			this.lblLoadV7.Name = "lblLoadV7";
-			this.lblLoadV7.Size = new System.Drawing.Size(112, 16);
-			this.lblLoadV7.TabIndex = 59;
-			this.lblLoadV7.Text = "Load Voltage 7";
-			this.lblLoadV7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblLoadV8
-			// 
-			this.lblLoadV8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblLoadV8.ForeColor = System.Drawing.Color.Blue;
-			this.lblLoadV8.Location = new System.Drawing.Point(513, 488);
-			this.lblLoadV8.Name = "lblLoadV8";
-			this.lblLoadV8.Size = new System.Drawing.Size(112, 16);
-			this.lblLoadV8.TabIndex = 60;
-			this.lblLoadV8.Text = "Load Voltage 8";
-			this.lblLoadV8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblNoLoadV
-			// 
-			this.lblNoLoadV.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblNoLoadV.Location = new System.Drawing.Point(647, 216);
-			this.lblNoLoadV.Name = "lblNoLoadV";
-			this.lblNoLoadV.Size = new System.Drawing.Size(116, 32);
-			this.lblNoLoadV.TabIndex = 70;
-			this.lblNoLoadV.Text = "Post Load Voltage > 11.0 VDC";
-			this.lblNoLoadV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblNoLoadV1
-			// 
-			this.lblNoLoadV1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblNoLoadV1.ForeColor = System.Drawing.Color.Blue;
-			this.lblNoLoadV1.Location = new System.Drawing.Point(647, 264);
-			this.lblNoLoadV1.Name = "lblNoLoadV1";
-			this.lblNoLoadV1.Size = new System.Drawing.Size(112, 16);
-			this.lblNoLoadV1.TabIndex = 62;
-			this.lblNoLoadV1.Text = "OC Voltage 1";
-			this.lblNoLoadV1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblNoLoadV2
-			// 
-			this.lblNoLoadV2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblNoLoadV2.ForeColor = System.Drawing.Color.Blue;
-			this.lblNoLoadV2.Location = new System.Drawing.Point(647, 296);
-			this.lblNoLoadV2.Name = "lblNoLoadV2";
-			this.lblNoLoadV2.Size = new System.Drawing.Size(112, 16);
-			this.lblNoLoadV2.TabIndex = 63;
-			this.lblNoLoadV2.Text = "OC Voltage 2";
-			this.lblNoLoadV2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblNoLoadV3
-			// 
-			this.lblNoLoadV3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblNoLoadV3.ForeColor = System.Drawing.Color.Blue;
-			this.lblNoLoadV3.Location = new System.Drawing.Point(647, 328);
-			this.lblNoLoadV3.Name = "lblNoLoadV3";
-			this.lblNoLoadV3.Size = new System.Drawing.Size(112, 16);
-			this.lblNoLoadV3.TabIndex = 64;
-			this.lblNoLoadV3.Text = "OC Voltage 3";
-			this.lblNoLoadV3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblNoLoadV4
-			// 
-			this.lblNoLoadV4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblNoLoadV4.ForeColor = System.Drawing.Color.Blue;
-			this.lblNoLoadV4.Location = new System.Drawing.Point(647, 360);
-			this.lblNoLoadV4.Name = "lblNoLoadV4";
-			this.lblNoLoadV4.Size = new System.Drawing.Size(112, 16);
-			this.lblNoLoadV4.TabIndex = 65;
-			this.lblNoLoadV4.Text = "OC Voltage 4";
-			this.lblNoLoadV4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblNoLoadV5
-			// 
-			this.lblNoLoadV5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblNoLoadV5.ForeColor = System.Drawing.Color.Blue;
-			this.lblNoLoadV5.Location = new System.Drawing.Point(647, 392);
-			this.lblNoLoadV5.Name = "lblNoLoadV5";
-			this.lblNoLoadV5.Size = new System.Drawing.Size(112, 16);
-			this.lblNoLoadV5.TabIndex = 66;
-			this.lblNoLoadV5.Text = "OC Voltage 5";
-			this.lblNoLoadV5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblNoLoadV6
-			// 
-			this.lblNoLoadV6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblNoLoadV6.ForeColor = System.Drawing.Color.Blue;
-			this.lblNoLoadV6.Location = new System.Drawing.Point(647, 424);
-			this.lblNoLoadV6.Name = "lblNoLoadV6";
-			this.lblNoLoadV6.Size = new System.Drawing.Size(112, 16);
-			this.lblNoLoadV6.TabIndex = 67;
-			this.lblNoLoadV6.Text = "OC Voltage 6";
-			this.lblNoLoadV6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblNoLoadV7
-			// 
-			this.lblNoLoadV7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblNoLoadV7.ForeColor = System.Drawing.Color.Blue;
-			this.lblNoLoadV7.Location = new System.Drawing.Point(647, 456);
-			this.lblNoLoadV7.Name = "lblNoLoadV7";
-			this.lblNoLoadV7.Size = new System.Drawing.Size(112, 16);
-			this.lblNoLoadV7.TabIndex = 68;
-			this.lblNoLoadV7.Text = "OC Voltage 7";
-			this.lblNoLoadV7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblNoLoadV8
-			// 
-			this.lblNoLoadV8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblNoLoadV8.ForeColor = System.Drawing.Color.Blue;
-			this.lblNoLoadV8.Location = new System.Drawing.Point(647, 488);
-			this.lblNoLoadV8.Name = "lblNoLoadV8";
-			this.lblNoLoadV8.Size = new System.Drawing.Size(112, 16);
-			this.lblNoLoadV8.TabIndex = 69;
-			this.lblNoLoadV8.Text = "OC Voltage 8";
-			this.lblNoLoadV8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblID
-			// 
-			this.lblID.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblID.Location = new System.Drawing.Point(776, 216);
-			this.lblID.Name = "lblID";
-			this.lblID.Size = new System.Drawing.Size(90, 32);
-			this.lblID.TabIndex = 161;
-			this.lblID.Text = "ID Resistor  in Ohms";
-			this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblID1
-			// 
-			this.lblID1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblID1.ForeColor = System.Drawing.Color.Blue;
-			this.lblID1.Location = new System.Drawing.Point(776, 264);
-			this.lblID1.Name = "lblID1";
-			this.lblID1.Size = new System.Drawing.Size(90, 16);
-			this.lblID1.TabIndex = 162;
-			this.lblID1.Text = "ID Value 1";
-			this.lblID1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblID2
-			// 
-			this.lblID2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblID2.ForeColor = System.Drawing.Color.Blue;
-			this.lblID2.Location = new System.Drawing.Point(776, 296);
-			this.lblID2.Name = "lblID2";
-			this.lblID2.Size = new System.Drawing.Size(90, 16);
-			this.lblID2.TabIndex = 163;
-			this.lblID2.Text = "ID Value 2";
-			this.lblID2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblID3
-			// 
-			this.lblID3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblID3.ForeColor = System.Drawing.Color.Blue;
-			this.lblID3.Location = new System.Drawing.Point(776, 328);
-			this.lblID3.Name = "lblID3";
-			this.lblID3.Size = new System.Drawing.Size(90, 16);
-			this.lblID3.TabIndex = 164;
-			this.lblID3.Text = "ID Value 3";
-			this.lblID3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblID4
-			// 
-			this.lblID4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblID4.ForeColor = System.Drawing.Color.Blue;
-			this.lblID4.Location = new System.Drawing.Point(776, 360);
-			this.lblID4.Name = "lblID4";
-			this.lblID4.Size = new System.Drawing.Size(90, 16);
-			this.lblID4.TabIndex = 165;
-			this.lblID4.Text = "ID Value 4";
-			this.lblID4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblID5
-			// 
-			this.lblID5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblID5.ForeColor = System.Drawing.Color.Blue;
-			this.lblID5.Location = new System.Drawing.Point(776, 392);
-			this.lblID5.Name = "lblID5";
-			this.lblID5.Size = new System.Drawing.Size(90, 16);
-			this.lblID5.TabIndex = 166;
-			this.lblID5.Text = "ID Value 5";
-			this.lblID5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblID6
-			// 
-			this.lblID6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblID6.ForeColor = System.Drawing.Color.Blue;
-			this.lblID6.Location = new System.Drawing.Point(776, 424);
-			this.lblID6.Name = "lblID6";
-			this.lblID6.Size = new System.Drawing.Size(90, 16);
-			this.lblID6.TabIndex = 167;
-			this.lblID6.Text = "ID Value 6";
-			this.lblID6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblID7
-			// 
-			this.lblID7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblID7.ForeColor = System.Drawing.Color.Blue;
-			this.lblID7.Location = new System.Drawing.Point(776, 456);
-			this.lblID7.Name = "lblID7";
-			this.lblID7.Size = new System.Drawing.Size(90, 16);
-			this.lblID7.TabIndex = 168;
-			this.lblID7.Text = "ID Value 7";
-			this.lblID7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblID8
-			// 
-			this.lblID8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblID8.ForeColor = System.Drawing.Color.Blue;
-			this.lblID8.Location = new System.Drawing.Point(776, 488);
-			this.lblID8.Name = "lblID8";
-			this.lblID8.Size = new System.Drawing.Size(90, 16);
-			this.lblID8.TabIndex = 169;
-			this.lblID8.Text = "ID Value 8";
-			this.lblID8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblResult
-			// 
-			this.lblResult.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblResult.Location = new System.Drawing.Point(880, 221);
-			this.lblResult.Name = "lblResult";
-			this.lblResult.Size = new System.Drawing.Size(90, 23);
-			this.lblResult.TabIndex = 79;
-			this.lblResult.Text = "Results";
-			this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblResult1
-			// 
-			this.lblResult1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblResult1.ForeColor = System.Drawing.Color.Blue;
-			this.lblResult1.Location = new System.Drawing.Point(880, 264);
-			this.lblResult1.Name = "lblResult1";
-			this.lblResult1.Size = new System.Drawing.Size(90, 16);
-			this.lblResult1.TabIndex = 71;
-			this.lblResult1.Text = "Result 1";
-			this.lblResult1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblResult2
-			// 
-			this.lblResult2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblResult2.ForeColor = System.Drawing.Color.Blue;
-			this.lblResult2.Location = new System.Drawing.Point(880, 296);
-			this.lblResult2.Name = "lblResult2";
-			this.lblResult2.Size = new System.Drawing.Size(90, 16);
-			this.lblResult2.TabIndex = 72;
-			this.lblResult2.Text = "Result 2";
-			this.lblResult2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblResult3
-			// 
-			this.lblResult3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblResult3.ForeColor = System.Drawing.Color.Blue;
-			this.lblResult3.Location = new System.Drawing.Point(880, 328);
-			this.lblResult3.Name = "lblResult3";
-			this.lblResult3.Size = new System.Drawing.Size(90, 16);
-			this.lblResult3.TabIndex = 73;
-			this.lblResult3.Text = "Result 3";
-			this.lblResult3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblResult4
-			// 
-			this.lblResult4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblResult4.ForeColor = System.Drawing.Color.Blue;
-			this.lblResult4.Location = new System.Drawing.Point(880, 360);
-			this.lblResult4.Name = "lblResult4";
-			this.lblResult4.Size = new System.Drawing.Size(90, 16);
-			this.lblResult4.TabIndex = 74;
-			this.lblResult4.Text = "Result 4";
-			this.lblResult4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblResult5
-			// 
-			this.lblResult5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblResult5.ForeColor = System.Drawing.Color.Blue;
-			this.lblResult5.Location = new System.Drawing.Point(880, 392);
-			this.lblResult5.Name = "lblResult5";
-			this.lblResult5.Size = new System.Drawing.Size(90, 16);
-			this.lblResult5.TabIndex = 75;
-			this.lblResult5.Text = "Result 5";
-			this.lblResult5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblResult6
-			// 
-			this.lblResult6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblResult6.ForeColor = System.Drawing.Color.Blue;
-			this.lblResult6.Location = new System.Drawing.Point(880, 424);
-			this.lblResult6.Name = "lblResult6";
-			this.lblResult6.Size = new System.Drawing.Size(90, 16);
-			this.lblResult6.TabIndex = 76;
-			this.lblResult6.Text = "Result 6";
-			this.lblResult6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblResult7
-			// 
-			this.lblResult7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblResult7.ForeColor = System.Drawing.Color.Blue;
-			this.lblResult7.Location = new System.Drawing.Point(880, 456);
-			this.lblResult7.Name = "lblResult7";
-			this.lblResult7.Size = new System.Drawing.Size(90, 16);
-			this.lblResult7.TabIndex = 77;
-			this.lblResult7.Text = "Result 7";
-			this.lblResult7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblResult8
-			// 
-			this.lblResult8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblResult8.ForeColor = System.Drawing.Color.Blue;
-			this.lblResult8.Location = new System.Drawing.Point(880, 488);
-			this.lblResult8.Name = "lblResult8";
-			this.lblResult8.Size = new System.Drawing.Size(90, 16);
-			this.lblResult8.TabIndex = 78;
-			this.lblResult8.Text = "Result 8";
-			this.lblResult8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblEnterSerNum
-			// 
-			this.lblEnterSerNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblEnterSerNum.Location = new System.Drawing.Point(16, 184);
-			this.lblEnterSerNum.Name = "lblEnterSerNum";
-			this.lblEnterSerNum.Size = new System.Drawing.Size(208, 16);
-			this.lblEnterSerNum.TabIndex = 80;
-			this.lblEnterSerNum.Text = "Enter Starting Serial Number  - ";
-			this.lblEnterSerNum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// txtStartSerNum
-			// 
-			this.txtStartSerNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtStartSerNum.Location = new System.Drawing.Point(240, 181);
-			this.txtStartSerNum.MaxLength = 15;
-			this.txtStartSerNum.Name = "txtStartSerNum";
-			this.txtStartSerNum.Size = new System.Drawing.Size(112, 22);
-			this.txtStartSerNum.TabIndex = 81;
-			this.txtStartSerNum.TabStop = false;
-			this.txtStartSerNum.Text = "AV01050001";
-			// 
-			// btnAccept
-			// 
-			this.btnAccept.Location = new System.Drawing.Point(392, 181);
-			this.btnAccept.Name = "btnAccept";
-			this.btnAccept.Size = new System.Drawing.Size(176, 23);
-			this.btnAccept.TabIndex = 150;
-			this.btnAccept.Text = "Accept Serial Number";
-			this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
-			// 
-			// btnStart
-			// 
-			this.btnStart.Location = new System.Drawing.Point(96, 528);
-			this.btnStart.Name = "btnStart";
-			this.btnStart.Size = new System.Drawing.Size(80, 23);
-			this.btnStart.TabIndex = 159;
-			this.btnStart.Text = "Start Test";
-			this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-			// 
-			// btnStop
-			// 
-			this.btnStop.Enabled = false;
-			this.btnStop.Location = new System.Drawing.Point(96, 528);
-			this.btnStop.Name = "btnStop";
-			this.btnStop.Size = new System.Drawing.Size(80, 23);
-			this.btnStop.TabIndex = 84;
-			this.btnStop.TabStop = false;
-			this.btnStop.Text = "Stop Test";
-			this.btnStop.Visible = false;
-			this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
-			// 
-			// timer1
-			// 
-			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-			// 
-			// lblElapsed
-			// 
-			this.lblElapsed.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblElapsed.Location = new System.Drawing.Point(376, 528);
-			this.lblElapsed.Name = "lblElapsed";
-			this.lblElapsed.Size = new System.Drawing.Size(140, 16);
-			this.lblElapsed.TabIndex = 85;
-			this.lblElapsed.Text = "Elapsed Test Time  -";
-			this.lblElapsed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// lblElapsedTime
-			// 
-			this.lblElapsedTime.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblElapsedTime.ForeColor = System.Drawing.Color.Blue;
-			this.lblElapsedTime.Location = new System.Drawing.Point(528, 528);
-			this.lblElapsedTime.Name = "lblElapsedTime";
-			this.lblElapsedTime.Size = new System.Drawing.Size(144, 16);
-			this.lblElapsedTime.TabIndex = 86;
-			this.lblElapsedTime.Text = "Elapsed Time Display";
-			this.lblElapsedTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblStartDateTime
-			// 
-			this.lblStartDateTime.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblStartDateTime.ForeColor = System.Drawing.Color.Blue;
-			this.lblStartDateTime.Location = new System.Drawing.Point(528, 552);
-			this.lblStartDateTime.Name = "lblStartDateTime";
-			this.lblStartDateTime.Size = new System.Drawing.Size(160, 16);
-			this.lblStartDateTime.TabIndex = 87;
-			this.lblStartDateTime.Text = "Date Time Display";
-			this.lblStartDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblStopDateTime
-			// 
-			this.lblStopDateTime.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblStopDateTime.ForeColor = System.Drawing.Color.Blue;
-			this.lblStopDateTime.Location = new System.Drawing.Point(528, 576);
-			this.lblStopDateTime.Name = "lblStopDateTime";
-			this.lblStopDateTime.Size = new System.Drawing.Size(160, 16);
-			this.lblStopDateTime.TabIndex = 88;
-			this.lblStopDateTime.Text = "Date Time Display";
-			this.lblStopDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(40, 24);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(176, 56);
-			this.pictureBox1.TabIndex = 89;
-			this.pictureBox1.TabStop = false;
-			// 
-			// lblTestTitle
-			// 
-			this.lblTestTitle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblTestTitle.Location = new System.Drawing.Point(280, 40);
-			this.lblTestTitle.Name = "lblTestTitle";
-			this.lblTestTitle.Size = new System.Drawing.Size(336, 23);
-			this.lblTestTitle.TabIndex = 90;
-			this.lblTestTitle.Text = "1008-1003-01 Battery Pack Test";
-			this.lblTestTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// btnQuit
-			// 
-			this.btnQuit.Location = new System.Drawing.Point(96, 576);
-			this.btnQuit.Name = "btnQuit";
-			this.btnQuit.Size = new System.Drawing.Size(80, 23);
-			this.btnQuit.TabIndex = 91;
-			this.btnQuit.TabStop = false;
-			this.btnQuit.Text = "Quit";
-			this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
-			// 
-			// lblStartTime
-			// 
-			this.lblStartTime.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblStartTime.Location = new System.Drawing.Point(376, 552);
-			this.lblStartTime.Name = "lblStartTime";
-			this.lblStartTime.Size = new System.Drawing.Size(140, 16);
-			this.lblStartTime.TabIndex = 97;
-			this.lblStartTime.Text = "Test Starting Time -";
-			this.lblStartTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// lblTestComplete
-			// 
-			this.lblTestComplete.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblTestComplete.Location = new System.Drawing.Point(356, 576);
-			this.lblTestComplete.Name = "lblTestComplete";
-			this.lblTestComplete.Size = new System.Drawing.Size(160, 16);
-			this.lblTestComplete.TabIndex = 98;
-			this.lblTestComplete.Text = "Test Completition Time -";
-			this.lblTestComplete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// txtLotNum
-			// 
-			this.txtLotNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtLotNum.Location = new System.Drawing.Point(688, 109);
-			this.txtLotNum.MaxLength = 15;
-			this.txtLotNum.Name = "txtLotNum";
-			this.txtLotNum.Size = new System.Drawing.Size(120, 22);
-			this.txtLotNum.TabIndex = 100;
-			this.txtLotNum.TabStop = false;
-			this.txtLotNum.Text = "Lot Number";
-			// 
-			// lblLotNum
-			// 
-			this.lblLotNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblLotNum.Location = new System.Drawing.Point(536, 112);
-			this.lblLotNum.Name = "lblLotNum";
-			this.lblLotNum.Size = new System.Drawing.Size(136, 16);
-			this.lblLotNum.TabIndex = 99;
-			this.lblLotNum.Text = "Enter lot number -";
-			this.lblLotNum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// lblFileName
-			// 
-			this.lblFileName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblFileName.Location = new System.Drawing.Point(240, 148);
-			this.lblFileName.Name = "lblFileName";
-			this.lblFileName.Size = new System.Drawing.Size(232, 16);
-			this.lblFileName.TabIndex = 102;
-			this.lblFileName.Text = "Database file name";
-			this.lblFileName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// btnSelectFile
-			// 
-			this.btnSelectFile.Location = new System.Drawing.Point(96, 145);
-			this.btnSelectFile.Name = "btnSelectFile";
-			this.btnSelectFile.Size = new System.Drawing.Size(128, 23);
-			this.btnSelectFile.TabIndex = 101;
-			this.btnSelectFile.TabStop = false;
-			this.btnSelectFile.Text = "Select Output File";
-			this.btnSelectFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
-			// 
-			// txtPoNumbr
-			// 
-			this.txtPoNumbr.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtPoNumbr.Location = new System.Drawing.Point(240, 109);
-			this.txtPoNumbr.MaxLength = 15;
-			this.txtPoNumbr.Name = "txtPoNumbr";
-			this.txtPoNumbr.Size = new System.Drawing.Size(120, 22);
-			this.txtPoNumbr.TabIndex = 104;
-			this.txtPoNumbr.TabStop = false;
-			this.txtPoNumbr.Text = "PO Number";
-			// 
-			// lblPoNumbr
-			// 
-			this.lblPoNumbr.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblPoNumbr.Location = new System.Drawing.Point(8, 112);
-			this.lblPoNumbr.Name = "lblPoNumbr";
-			this.lblPoNumbr.Size = new System.Drawing.Size(216, 16);
-			this.lblPoNumbr.TabIndex = 103;
-			this.lblPoNumbr.Text = "Enter purchase order number -";
-			this.lblPoNumbr.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// txtCellCode
-			// 
-			this.txtCellCode.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtCellCode.Location = new System.Drawing.Point(688, 145);
-			this.txtCellCode.MaxLength = 15;
-			this.txtCellCode.Name = "txtCellCode";
-			this.txtCellCode.Size = new System.Drawing.Size(120, 22);
-			this.txtCellCode.TabIndex = 106;
-			this.txtCellCode.TabStop = false;
-			this.txtCellCode.Text = "Cell Date Code";
-			// 
-			// lblCellCode
-			// 
-			this.lblCellCode.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblCellCode.Location = new System.Drawing.Point(528, 148);
-			this.lblCellCode.Name = "lblCellCode";
-			this.lblCellCode.Size = new System.Drawing.Size(144, 16);
-			this.lblCellCode.TabIndex = 105;
-			this.lblCellCode.Text = "Enter Cell Date Code -";
-			this.lblCellCode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// lblPackSerNums
-			// 
-			this.lblPackSerNums.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.lblPackSerNums.Location = new System.Drawing.Point(245, 216);
-			this.lblPackSerNums.Name = "lblPackSerNums";
-			this.lblPackSerNums.Size = new System.Drawing.Size(112, 32);
-			this.lblPackSerNums.TabIndex = 107;
-			this.lblPackSerNums.Text = "Board Serial Number";
-			this.lblPackSerNums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// txtPackSerNum1
-			// 
-			this.txtPackSerNum1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtPackSerNum1.Location = new System.Drawing.Point(245, 261);
-			this.txtPackSerNum1.MaxLength = 15;
-			this.txtPackSerNum1.Name = "txtPackSerNum1";
-			this.txtPackSerNum1.Size = new System.Drawing.Size(112, 22);
-			this.txtPackSerNum1.TabIndex = 151;
-			this.txtPackSerNum1.Text = "AV01050001";
-			// 
-			// txtPackSerNum2
-			// 
-			this.txtPackSerNum2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtPackSerNum2.Location = new System.Drawing.Point(245, 293);
-			this.txtPackSerNum2.MaxLength = 15;
-			this.txtPackSerNum2.Name = "txtPackSerNum2";
-			this.txtPackSerNum2.Size = new System.Drawing.Size(112, 22);
-			this.txtPackSerNum2.TabIndex = 152;
-			this.txtPackSerNum2.Text = "AV01050001";
-			// 
-			// txtPackSerNum3
-			// 
-			this.txtPackSerNum3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtPackSerNum3.Location = new System.Drawing.Point(245, 325);
-			this.txtPackSerNum3.MaxLength = 15;
-			this.txtPackSerNum3.Name = "txtPackSerNum3";
-			this.txtPackSerNum3.Size = new System.Drawing.Size(112, 22);
-			this.txtPackSerNum3.TabIndex = 153;
-			this.txtPackSerNum3.Text = "AV01050001";
-			// 
-			// txtPackSerNum4
-			// 
-			this.txtPackSerNum4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtPackSerNum4.Location = new System.Drawing.Point(245, 357);
-			this.txtPackSerNum4.MaxLength = 15;
-			this.txtPackSerNum4.Name = "txtPackSerNum4";
-			this.txtPackSerNum4.Size = new System.Drawing.Size(112, 22);
-			this.txtPackSerNum4.TabIndex = 154;
-			this.txtPackSerNum4.Text = "AV01050001";
-			// 
-			// txtPackSerNum5
-			// 
-			this.txtPackSerNum5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtPackSerNum5.Location = new System.Drawing.Point(245, 389);
-			this.txtPackSerNum5.MaxLength = 15;
-			this.txtPackSerNum5.Name = "txtPackSerNum5";
-			this.txtPackSerNum5.Size = new System.Drawing.Size(112, 22);
-			this.txtPackSerNum5.TabIndex = 155;
-			this.txtPackSerNum5.Text = "AV01050001";
-			// 
-			// txtPackSerNum6
-			// 
-			this.txtPackSerNum6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtPackSerNum6.Location = new System.Drawing.Point(245, 421);
-			this.txtPackSerNum6.MaxLength = 15;
-			this.txtPackSerNum6.Name = "txtPackSerNum6";
-			this.txtPackSerNum6.Size = new System.Drawing.Size(112, 22);
-			this.txtPackSerNum6.TabIndex = 156;
-			this.txtPackSerNum6.Text = "AV01050001";
-			// 
-			// txtPackSerNum7
-			// 
-			this.txtPackSerNum7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtPackSerNum7.Location = new System.Drawing.Point(245, 453);
-			this.txtPackSerNum7.MaxLength = 15;
-			this.txtPackSerNum7.Name = "txtPackSerNum7";
-			this.txtPackSerNum7.Size = new System.Drawing.Size(112, 22);
-			this.txtPackSerNum7.TabIndex = 157;
-			this.txtPackSerNum7.Text = "AV01050001";
-			// 
-			// txtPackSerNum8
-			// 
-			this.txtPackSerNum8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.txtPackSerNum8.Location = new System.Drawing.Point(245, 485);
-			this.txtPackSerNum8.MaxLength = 15;
-			this.txtPackSerNum8.Name = "txtPackSerNum8";
-			this.txtPackSerNum8.Size = new System.Drawing.Size(112, 22);
-			this.txtPackSerNum8.TabIndex = 158;
-			this.txtPackSerNum8.Text = "AV01050001";
-			// 
-			// chkIDRes
-			// 
-			this.chkIDRes.Location = new System.Drawing.Point(640, 181);
-			this.chkIDRes.Name = "chkIDRes";
-			this.chkIDRes.Size = new System.Drawing.Size(128, 23);
-			this.chkIDRes.TabIndex = 160;
-			this.chkIDRes.Text = "Run ID Pin Test";
-			this.chkIDRes.CheckedChanged += new System.EventHandler(this.chkIDRes_CheckedChanged);
-			// 
-			// chkIDResOnly
-			// 
-			this.chkIDResOnly.Enabled = false;
-			this.chkIDResOnly.Location = new System.Drawing.Point(792, 181);
-			this.chkIDResOnly.Name = "chkIDResOnly";
-			this.chkIDResOnly.Size = new System.Drawing.Size(160, 23);
-			this.chkIDResOnly.TabIndex = 170;
-			this.chkIDResOnly.Text = "Only Run ID Pin Test";
-			// 
-			// Test2
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(7, 15);
-			this.ClientSize = new System.Drawing.Size(984, 635);
-			this.Controls.Add(this.chkIDResOnly);
-			this.Controls.Add(this.lblID8);
-			this.Controls.Add(this.lblID7);
-			this.Controls.Add(this.lblID6);
-			this.Controls.Add(this.lblID5);
-			this.Controls.Add(this.lblID4);
-			this.Controls.Add(this.lblID3);
-			this.Controls.Add(this.lblID2);
-			this.Controls.Add(this.lblID1);
-			this.Controls.Add(this.lblID);
-			this.Controls.Add(this.chkIDRes);
-			this.Controls.Add(this.txtPackSerNum8);
-			this.Controls.Add(this.txtPackSerNum7);
-			this.Controls.Add(this.txtPackSerNum6);
-			this.Controls.Add(this.txtPackSerNum5);
-			this.Controls.Add(this.txtPackSerNum4);
-			this.Controls.Add(this.txtPackSerNum3);
-			this.Controls.Add(this.txtPackSerNum2);
-			this.Controls.Add(this.txtPackSerNum1);
-			this.Controls.Add(this.lblPackSerNums);
-			this.Controls.Add(this.txtCellCode);
-			this.Controls.Add(this.lblCellCode);
-			this.Controls.Add(this.txtPoNumbr);
-			this.Controls.Add(this.lblPoNumbr);
-			this.Controls.Add(this.lblFileName);
-			this.Controls.Add(this.btnSelectFile);
-			this.Controls.Add(this.txtLotNum);
-			this.Controls.Add(this.lblLotNum);
-			this.Controls.Add(this.lblTestComplete);
-			this.Controls.Add(this.lblStartTime);
-			this.Controls.Add(this.btnQuit);
-			this.Controls.Add(this.lblTestTitle);
-			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.lblStopDateTime);
-			this.Controls.Add(this.lblStartDateTime);
-			this.Controls.Add(this.lblElapsedTime);
-			this.Controls.Add(this.lblElapsed);
-			this.Controls.Add(this.btnStop);
-			this.Controls.Add(this.btnStart);
-			this.Controls.Add(this.btnAccept);
-			this.Controls.Add(this.txtStartSerNum);
-			this.Controls.Add(this.lblEnterSerNum);
-			this.Controls.Add(this.lblResult);
-			this.Controls.Add(this.lblResult8);
-			this.Controls.Add(this.lblResult7);
-			this.Controls.Add(this.lblResult6);
-			this.Controls.Add(this.lblResult5);
-			this.Controls.Add(this.lblResult4);
-			this.Controls.Add(this.lblResult3);
-			this.Controls.Add(this.lblResult2);
-			this.Controls.Add(this.lblResult1);
-			this.Controls.Add(this.lblNoLoadV);
-			this.Controls.Add(this.lblNoLoadV8);
-			this.Controls.Add(this.lblNoLoadV7);
-			this.Controls.Add(this.lblNoLoadV6);
-			this.Controls.Add(this.lblNoLoadV5);
-			this.Controls.Add(this.lblNoLoadV4);
-			this.Controls.Add(this.lblNoLoadV3);
-			this.Controls.Add(this.lblNoLoadV2);
-			this.Controls.Add(this.lblNoLoadV1);
-			this.Controls.Add(this.lblLoadV);
-			this.Controls.Add(this.lblLoadV8);
-			this.Controls.Add(this.lblLoadV7);
-			this.Controls.Add(this.lblLoadV6);
-			this.Controls.Add(this.lblLoadV5);
-			this.Controls.Add(this.lblLoadV4);
-			this.Controls.Add(this.lblLoadV3);
-			this.Controls.Add(this.lblLoadV2);
-			this.Controls.Add(this.lblLoadV1);
-			this.Controls.Add(this.lblOcVoltage);
-			this.Controls.Add(this.lblOcV8);
-			this.Controls.Add(this.lblOcV7);
-			this.Controls.Add(this.lblOcV6);
-			this.Controls.Add(this.lblOcV5);
-			this.Controls.Add(this.lblOcV4);
-			this.Controls.Add(this.lblOcV3);
-			this.Controls.Add(this.lblOcV2);
-			this.Controls.Add(this.lblOcV1);
-			this.Controls.Add(this.lblSerNum8);
-			this.Controls.Add(this.lblSerNum7);
-			this.Controls.Add(this.lblSerNum6);
-			this.Controls.Add(this.lblSerNum5);
-			this.Controls.Add(this.lblSerNum4);
-			this.Controls.Add(this.lblSerNum3);
-			this.Controls.Add(this.lblSerNum2);
-			this.Controls.Add(this.lblSerNum1);
-			this.Controls.Add(this.lblBattery8);
-			this.Controls.Add(this.lblBattery7);
-			this.Controls.Add(this.lblBattery6);
-			this.Controls.Add(this.lblBattery5);
-			this.Controls.Add(this.lblBattery4);
-			this.Controls.Add(this.lblBattery3);
-			this.Controls.Add(this.lblBattery2);
-			this.Controls.Add(this.lblSerialNums);
-			this.Controls.Add(this.lblBattery1);
-			this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.Name = "Test2";
-			this.Text = "Test2";
-			this.ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Zoll_2015));
+            this.lblBattery1 = new System.Windows.Forms.Label();
+            this.lblSerialNums = new System.Windows.Forms.Label();
+            this.lblBattery2 = new System.Windows.Forms.Label();
+            this.lblBattery3 = new System.Windows.Forms.Label();
+            this.lblBattery4 = new System.Windows.Forms.Label();
+            this.lblBattery5 = new System.Windows.Forms.Label();
+            this.lblBattery6 = new System.Windows.Forms.Label();
+            this.lblBattery7 = new System.Windows.Forms.Label();
+            this.lblBattery8 = new System.Windows.Forms.Label();
+            this.lblSerNum1 = new System.Windows.Forms.Label();
+            this.lblSerNum2 = new System.Windows.Forms.Label();
+            this.lblSerNum3 = new System.Windows.Forms.Label();
+            this.lblSerNum4 = new System.Windows.Forms.Label();
+            this.lblSerNum5 = new System.Windows.Forms.Label();
+            this.lblSerNum6 = new System.Windows.Forms.Label();
+            this.lblSerNum7 = new System.Windows.Forms.Label();
+            this.lblSerNum8 = new System.Windows.Forms.Label();
+            this.lblOcVoltage = new System.Windows.Forms.Label();
+            this.lblOcV1 = new System.Windows.Forms.Label();
+            this.lblOcV2 = new System.Windows.Forms.Label();
+            this.lblOcV3 = new System.Windows.Forms.Label();
+            this.lblOcV4 = new System.Windows.Forms.Label();
+            this.lblOcV5 = new System.Windows.Forms.Label();
+            this.lblOcV6 = new System.Windows.Forms.Label();
+            this.lblOcV7 = new System.Windows.Forms.Label();
+            this.lblOcV8 = new System.Windows.Forms.Label();
+            this.lblLoadV = new System.Windows.Forms.Label();
+            this.lblLoadV1 = new System.Windows.Forms.Label();
+            this.lblLoadV2 = new System.Windows.Forms.Label();
+            this.lblLoadV3 = new System.Windows.Forms.Label();
+            this.lblLoadV4 = new System.Windows.Forms.Label();
+            this.lblLoadV5 = new System.Windows.Forms.Label();
+            this.lblLoadV6 = new System.Windows.Forms.Label();
+            this.lblLoadV7 = new System.Windows.Forms.Label();
+            this.lblLoadV8 = new System.Windows.Forms.Label();
+            this.lblNoLoadV = new System.Windows.Forms.Label();
+            this.lblNoLoadV1 = new System.Windows.Forms.Label();
+            this.lblNoLoadV2 = new System.Windows.Forms.Label();
+            this.lblNoLoadV3 = new System.Windows.Forms.Label();
+            this.lblNoLoadV4 = new System.Windows.Forms.Label();
+            this.lblNoLoadV5 = new System.Windows.Forms.Label();
+            this.lblNoLoadV6 = new System.Windows.Forms.Label();
+            this.lblNoLoadV7 = new System.Windows.Forms.Label();
+            this.lblNoLoadV8 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblID1 = new System.Windows.Forms.Label();
+            this.lblID2 = new System.Windows.Forms.Label();
+            this.lblID3 = new System.Windows.Forms.Label();
+            this.lblID4 = new System.Windows.Forms.Label();
+            this.lblID5 = new System.Windows.Forms.Label();
+            this.lblID6 = new System.Windows.Forms.Label();
+            this.lblID7 = new System.Windows.Forms.Label();
+            this.lblID8 = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.lblResult1 = new System.Windows.Forms.Label();
+            this.lblResult2 = new System.Windows.Forms.Label();
+            this.lblResult3 = new System.Windows.Forms.Label();
+            this.lblResult4 = new System.Windows.Forms.Label();
+            this.lblResult5 = new System.Windows.Forms.Label();
+            this.lblResult6 = new System.Windows.Forms.Label();
+            this.lblResult7 = new System.Windows.Forms.Label();
+            this.lblResult8 = new System.Windows.Forms.Label();
+            this.lblEnterSerNum = new System.Windows.Forms.Label();
+            this.txtStartSerNum = new System.Windows.Forms.TextBox();
+            this.btnAccept = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblElapsed = new System.Windows.Forms.Label();
+            this.lblElapsedTime = new System.Windows.Forms.Label();
+            this.lblStartDateTime = new System.Windows.Forms.Label();
+            this.lblStopDateTime = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTestTitle = new System.Windows.Forms.Label();
+            this.btnQuit = new System.Windows.Forms.Button();
+            this.lblStartTime = new System.Windows.Forms.Label();
+            this.lblTestComplete = new System.Windows.Forms.Label();
+            this.txtLotNum = new System.Windows.Forms.TextBox();
+            this.lblLotNum = new System.Windows.Forms.Label();
+            this.lblFileName = new System.Windows.Forms.Label();
+            this.btnSelectFile = new System.Windows.Forms.Button();
+            this.txtPoNumbr = new System.Windows.Forms.TextBox();
+            this.lblPoNumbr = new System.Windows.Forms.Label();
+            this.txtCellCode = new System.Windows.Forms.TextBox();
+            this.lblCellCode = new System.Windows.Forms.Label();
+            this.lblPackSerNums = new System.Windows.Forms.Label();
+            this.txtPackSerNum1 = new System.Windows.Forms.TextBox();
+            this.txtPackSerNum2 = new System.Windows.Forms.TextBox();
+            this.txtPackSerNum3 = new System.Windows.Forms.TextBox();
+            this.txtPackSerNum4 = new System.Windows.Forms.TextBox();
+            this.txtPackSerNum5 = new System.Windows.Forms.TextBox();
+            this.txtPackSerNum6 = new System.Windows.Forms.TextBox();
+            this.txtPackSerNum7 = new System.Windows.Forms.TextBox();
+            this.txtPackSerNum8 = new System.Windows.Forms.TextBox();
+            this.chkIDRes = new System.Windows.Forms.CheckBox();
+            this.chkIDResOnly = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lblBattery1
+            // 
+            this.lblBattery1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBattery1.Location = new System.Drawing.Point(24, 264);
+            this.lblBattery1.Name = "lblBattery1";
+            this.lblBattery1.Size = new System.Drawing.Size(80, 16);
+            this.lblBattery1.TabIndex = 0;
+            this.lblBattery1.Text = "Battery 1  -";
+            this.lblBattery1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblSerialNums
+            // 
+            this.lblSerialNums.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerialNums.Location = new System.Drawing.Point(111, 216);
+            this.lblSerialNums.Name = "lblSerialNums";
+            this.lblSerialNums.Size = new System.Drawing.Size(112, 32);
+            this.lblSerialNums.TabIndex = 19;
+            this.lblSerialNums.Text = "Pack Serial Number";
+            this.lblSerialNums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBattery2
+            // 
+            this.lblBattery2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBattery2.Location = new System.Drawing.Point(24, 296);
+            this.lblBattery2.Name = "lblBattery2";
+            this.lblBattery2.Size = new System.Drawing.Size(80, 16);
+            this.lblBattery2.TabIndex = 29;
+            this.lblBattery2.Text = "Battery 2  -";
+            this.lblBattery2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblBattery3
+            // 
+            this.lblBattery3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBattery3.Location = new System.Drawing.Point(24, 328);
+            this.lblBattery3.Name = "lblBattery3";
+            this.lblBattery3.Size = new System.Drawing.Size(80, 16);
+            this.lblBattery3.TabIndex = 30;
+            this.lblBattery3.Text = "Battery 3  -";
+            this.lblBattery3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblBattery4
+            // 
+            this.lblBattery4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBattery4.Location = new System.Drawing.Point(24, 360);
+            this.lblBattery4.Name = "lblBattery4";
+            this.lblBattery4.Size = new System.Drawing.Size(80, 16);
+            this.lblBattery4.TabIndex = 31;
+            this.lblBattery4.Text = "Battery 4  -";
+            this.lblBattery4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblBattery5
+            // 
+            this.lblBattery5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBattery5.Location = new System.Drawing.Point(24, 392);
+            this.lblBattery5.Name = "lblBattery5";
+            this.lblBattery5.Size = new System.Drawing.Size(80, 16);
+            this.lblBattery5.TabIndex = 32;
+            this.lblBattery5.Text = "Battery 5  -";
+            this.lblBattery5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblBattery6
+            // 
+            this.lblBattery6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBattery6.Location = new System.Drawing.Point(24, 424);
+            this.lblBattery6.Name = "lblBattery6";
+            this.lblBattery6.Size = new System.Drawing.Size(80, 16);
+            this.lblBattery6.TabIndex = 33;
+            this.lblBattery6.Text = "Battery 6  -";
+            this.lblBattery6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblBattery7
+            // 
+            this.lblBattery7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBattery7.Location = new System.Drawing.Point(24, 456);
+            this.lblBattery7.Name = "lblBattery7";
+            this.lblBattery7.Size = new System.Drawing.Size(80, 16);
+            this.lblBattery7.TabIndex = 34;
+            this.lblBattery7.Text = "Battery 7  -";
+            this.lblBattery7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblBattery8
+            // 
+            this.lblBattery8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBattery8.Location = new System.Drawing.Point(24, 488);
+            this.lblBattery8.Name = "lblBattery8";
+            this.lblBattery8.Size = new System.Drawing.Size(80, 16);
+            this.lblBattery8.TabIndex = 35;
+            this.lblBattery8.Text = "Battery 8  -";
+            this.lblBattery8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblSerNum1
+            // 
+            this.lblSerNum1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerNum1.ForeColor = System.Drawing.Color.Blue;
+            this.lblSerNum1.Location = new System.Drawing.Point(111, 264);
+            this.lblSerNum1.Name = "lblSerNum1";
+            this.lblSerNum1.Size = new System.Drawing.Size(112, 16);
+            this.lblSerNum1.TabIndex = 36;
+            this.lblSerNum1.Text = "Serial Number 1";
+            this.lblSerNum1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSerNum2
+            // 
+            this.lblSerNum2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerNum2.ForeColor = System.Drawing.Color.Blue;
+            this.lblSerNum2.Location = new System.Drawing.Point(111, 296);
+            this.lblSerNum2.Name = "lblSerNum2";
+            this.lblSerNum2.Size = new System.Drawing.Size(112, 16);
+            this.lblSerNum2.TabIndex = 37;
+            this.lblSerNum2.Text = "Serial Number 2";
+            this.lblSerNum2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSerNum3
+            // 
+            this.lblSerNum3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerNum3.ForeColor = System.Drawing.Color.Blue;
+            this.lblSerNum3.Location = new System.Drawing.Point(111, 328);
+            this.lblSerNum3.Name = "lblSerNum3";
+            this.lblSerNum3.Size = new System.Drawing.Size(112, 16);
+            this.lblSerNum3.TabIndex = 38;
+            this.lblSerNum3.Text = "Serial Number 3";
+            this.lblSerNum3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSerNum4
+            // 
+            this.lblSerNum4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerNum4.ForeColor = System.Drawing.Color.Blue;
+            this.lblSerNum4.Location = new System.Drawing.Point(111, 360);
+            this.lblSerNum4.Name = "lblSerNum4";
+            this.lblSerNum4.Size = new System.Drawing.Size(112, 16);
+            this.lblSerNum4.TabIndex = 39;
+            this.lblSerNum4.Text = "Serial Number 4";
+            this.lblSerNum4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSerNum5
+            // 
+            this.lblSerNum5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerNum5.ForeColor = System.Drawing.Color.Blue;
+            this.lblSerNum5.Location = new System.Drawing.Point(111, 392);
+            this.lblSerNum5.Name = "lblSerNum5";
+            this.lblSerNum5.Size = new System.Drawing.Size(112, 16);
+            this.lblSerNum5.TabIndex = 40;
+            this.lblSerNum5.Text = "Serial Number 5";
+            this.lblSerNum5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSerNum6
+            // 
+            this.lblSerNum6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerNum6.ForeColor = System.Drawing.Color.Blue;
+            this.lblSerNum6.Location = new System.Drawing.Point(111, 424);
+            this.lblSerNum6.Name = "lblSerNum6";
+            this.lblSerNum6.Size = new System.Drawing.Size(112, 16);
+            this.lblSerNum6.TabIndex = 41;
+            this.lblSerNum6.Text = "Serial Number 6";
+            this.lblSerNum6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSerNum7
+            // 
+            this.lblSerNum7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerNum7.ForeColor = System.Drawing.Color.Blue;
+            this.lblSerNum7.Location = new System.Drawing.Point(111, 456);
+            this.lblSerNum7.Name = "lblSerNum7";
+            this.lblSerNum7.Size = new System.Drawing.Size(112, 16);
+            this.lblSerNum7.TabIndex = 42;
+            this.lblSerNum7.Text = "Serial Number 7";
+            this.lblSerNum7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSerNum8
+            // 
+            this.lblSerNum8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerNum8.ForeColor = System.Drawing.Color.Blue;
+            this.lblSerNum8.Location = new System.Drawing.Point(111, 488);
+            this.lblSerNum8.Name = "lblSerNum8";
+            this.lblSerNum8.Size = new System.Drawing.Size(112, 16);
+            this.lblSerNum8.TabIndex = 43;
+            this.lblSerNum8.Text = "Serial Number 8";
+            this.lblSerNum8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOcVoltage
+            // 
+            this.lblOcVoltage.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcVoltage.Location = new System.Drawing.Point(379, 216);
+            this.lblOcVoltage.Name = "lblOcVoltage";
+            this.lblOcVoltage.Size = new System.Drawing.Size(112, 32);
+            this.lblOcVoltage.TabIndex = 52;
+            this.lblOcVoltage.Text = "Pre-Test Voltage  > 11.0 VDC";
+            this.lblOcVoltage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOcV1
+            // 
+            this.lblOcV1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcV1.ForeColor = System.Drawing.Color.Blue;
+            this.lblOcV1.Location = new System.Drawing.Point(379, 264);
+            this.lblOcV1.Name = "lblOcV1";
+            this.lblOcV1.Size = new System.Drawing.Size(112, 16);
+            this.lblOcV1.TabIndex = 44;
+            this.lblOcV1.Text = "OC Voltage 1";
+            this.lblOcV1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOcV2
+            // 
+            this.lblOcV2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcV2.ForeColor = System.Drawing.Color.Blue;
+            this.lblOcV2.Location = new System.Drawing.Point(379, 296);
+            this.lblOcV2.Name = "lblOcV2";
+            this.lblOcV2.Size = new System.Drawing.Size(112, 16);
+            this.lblOcV2.TabIndex = 45;
+            this.lblOcV2.Text = "OC Voltage 2";
+            this.lblOcV2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOcV3
+            // 
+            this.lblOcV3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcV3.ForeColor = System.Drawing.Color.Blue;
+            this.lblOcV3.Location = new System.Drawing.Point(379, 328);
+            this.lblOcV3.Name = "lblOcV3";
+            this.lblOcV3.Size = new System.Drawing.Size(112, 16);
+            this.lblOcV3.TabIndex = 46;
+            this.lblOcV3.Text = "OC Voltage 3";
+            this.lblOcV3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOcV4
+            // 
+            this.lblOcV4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcV4.ForeColor = System.Drawing.Color.Blue;
+            this.lblOcV4.Location = new System.Drawing.Point(379, 360);
+            this.lblOcV4.Name = "lblOcV4";
+            this.lblOcV4.Size = new System.Drawing.Size(112, 16);
+            this.lblOcV4.TabIndex = 47;
+            this.lblOcV4.Text = "OC Voltage 4";
+            this.lblOcV4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOcV5
+            // 
+            this.lblOcV5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcV5.ForeColor = System.Drawing.Color.Blue;
+            this.lblOcV5.Location = new System.Drawing.Point(379, 392);
+            this.lblOcV5.Name = "lblOcV5";
+            this.lblOcV5.Size = new System.Drawing.Size(112, 16);
+            this.lblOcV5.TabIndex = 48;
+            this.lblOcV5.Text = "OC Voltage 5";
+            this.lblOcV5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOcV6
+            // 
+            this.lblOcV6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcV6.ForeColor = System.Drawing.Color.Blue;
+            this.lblOcV6.Location = new System.Drawing.Point(379, 424);
+            this.lblOcV6.Name = "lblOcV6";
+            this.lblOcV6.Size = new System.Drawing.Size(112, 16);
+            this.lblOcV6.TabIndex = 49;
+            this.lblOcV6.Text = "OC Voltage 6";
+            this.lblOcV6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOcV7
+            // 
+            this.lblOcV7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcV7.ForeColor = System.Drawing.Color.Blue;
+            this.lblOcV7.Location = new System.Drawing.Point(379, 456);
+            this.lblOcV7.Name = "lblOcV7";
+            this.lblOcV7.Size = new System.Drawing.Size(112, 16);
+            this.lblOcV7.TabIndex = 50;
+            this.lblOcV7.Text = "OC Voltage 7";
+            this.lblOcV7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOcV8
+            // 
+            this.lblOcV8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcV8.ForeColor = System.Drawing.Color.Blue;
+            this.lblOcV8.Location = new System.Drawing.Point(379, 488);
+            this.lblOcV8.Name = "lblOcV8";
+            this.lblOcV8.Size = new System.Drawing.Size(112, 16);
+            this.lblOcV8.TabIndex = 51;
+            this.lblOcV8.Text = "OC Voltage 8";
+            this.lblOcV8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoadV
+            // 
+            this.lblLoadV.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadV.Location = new System.Drawing.Point(513, 216);
+            this.lblLoadV.Name = "lblLoadV";
+            this.lblLoadV.Size = new System.Drawing.Size(112, 32);
+            this.lblLoadV.TabIndex = 61;
+            this.lblLoadV.Text = "6A Load Voltage > 9.0 VDC";
+            this.lblLoadV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoadV1
+            // 
+            this.lblLoadV1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadV1.ForeColor = System.Drawing.Color.Blue;
+            this.lblLoadV1.Location = new System.Drawing.Point(513, 264);
+            this.lblLoadV1.Name = "lblLoadV1";
+            this.lblLoadV1.Size = new System.Drawing.Size(112, 16);
+            this.lblLoadV1.TabIndex = 53;
+            this.lblLoadV1.Text = "Load Voltage 1";
+            this.lblLoadV1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoadV2
+            // 
+            this.lblLoadV2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadV2.ForeColor = System.Drawing.Color.Blue;
+            this.lblLoadV2.Location = new System.Drawing.Point(513, 296);
+            this.lblLoadV2.Name = "lblLoadV2";
+            this.lblLoadV2.Size = new System.Drawing.Size(112, 16);
+            this.lblLoadV2.TabIndex = 54;
+            this.lblLoadV2.Text = "Load Voltage 2";
+            this.lblLoadV2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoadV3
+            // 
+            this.lblLoadV3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadV3.ForeColor = System.Drawing.Color.Blue;
+            this.lblLoadV3.Location = new System.Drawing.Point(513, 328);
+            this.lblLoadV3.Name = "lblLoadV3";
+            this.lblLoadV3.Size = new System.Drawing.Size(112, 16);
+            this.lblLoadV3.TabIndex = 55;
+            this.lblLoadV3.Text = "Load Voltage 3";
+            this.lblLoadV3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoadV4
+            // 
+            this.lblLoadV4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadV4.ForeColor = System.Drawing.Color.Blue;
+            this.lblLoadV4.Location = new System.Drawing.Point(513, 360);
+            this.lblLoadV4.Name = "lblLoadV4";
+            this.lblLoadV4.Size = new System.Drawing.Size(112, 16);
+            this.lblLoadV4.TabIndex = 56;
+            this.lblLoadV4.Text = "Load Voltage 4";
+            this.lblLoadV4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoadV5
+            // 
+            this.lblLoadV5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadV5.ForeColor = System.Drawing.Color.Blue;
+            this.lblLoadV5.Location = new System.Drawing.Point(513, 392);
+            this.lblLoadV5.Name = "lblLoadV5";
+            this.lblLoadV5.Size = new System.Drawing.Size(112, 16);
+            this.lblLoadV5.TabIndex = 57;
+            this.lblLoadV5.Text = "Load Voltage 5";
+            this.lblLoadV5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoadV6
+            // 
+            this.lblLoadV6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadV6.ForeColor = System.Drawing.Color.Blue;
+            this.lblLoadV6.Location = new System.Drawing.Point(513, 424);
+            this.lblLoadV6.Name = "lblLoadV6";
+            this.lblLoadV6.Size = new System.Drawing.Size(112, 16);
+            this.lblLoadV6.TabIndex = 58;
+            this.lblLoadV6.Text = "Load Voltage 6";
+            this.lblLoadV6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoadV7
+            // 
+            this.lblLoadV7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadV7.ForeColor = System.Drawing.Color.Blue;
+            this.lblLoadV7.Location = new System.Drawing.Point(513, 456);
+            this.lblLoadV7.Name = "lblLoadV7";
+            this.lblLoadV7.Size = new System.Drawing.Size(112, 16);
+            this.lblLoadV7.TabIndex = 59;
+            this.lblLoadV7.Text = "Load Voltage 7";
+            this.lblLoadV7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoadV8
+            // 
+            this.lblLoadV8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadV8.ForeColor = System.Drawing.Color.Blue;
+            this.lblLoadV8.Location = new System.Drawing.Point(513, 488);
+            this.lblLoadV8.Name = "lblLoadV8";
+            this.lblLoadV8.Size = new System.Drawing.Size(112, 16);
+            this.lblLoadV8.TabIndex = 60;
+            this.lblLoadV8.Text = "Load Voltage 8";
+            this.lblLoadV8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNoLoadV
+            // 
+            this.lblNoLoadV.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoLoadV.Location = new System.Drawing.Point(647, 216);
+            this.lblNoLoadV.Name = "lblNoLoadV";
+            this.lblNoLoadV.Size = new System.Drawing.Size(116, 32);
+            this.lblNoLoadV.TabIndex = 70;
+            this.lblNoLoadV.Text = "Post Load Voltage > 11.0 VDC";
+            this.lblNoLoadV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNoLoadV1
+            // 
+            this.lblNoLoadV1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoLoadV1.ForeColor = System.Drawing.Color.Blue;
+            this.lblNoLoadV1.Location = new System.Drawing.Point(647, 264);
+            this.lblNoLoadV1.Name = "lblNoLoadV1";
+            this.lblNoLoadV1.Size = new System.Drawing.Size(112, 16);
+            this.lblNoLoadV1.TabIndex = 62;
+            this.lblNoLoadV1.Text = "OC Voltage 1";
+            this.lblNoLoadV1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNoLoadV2
+            // 
+            this.lblNoLoadV2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoLoadV2.ForeColor = System.Drawing.Color.Blue;
+            this.lblNoLoadV2.Location = new System.Drawing.Point(647, 296);
+            this.lblNoLoadV2.Name = "lblNoLoadV2";
+            this.lblNoLoadV2.Size = new System.Drawing.Size(112, 16);
+            this.lblNoLoadV2.TabIndex = 63;
+            this.lblNoLoadV2.Text = "OC Voltage 2";
+            this.lblNoLoadV2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNoLoadV3
+            // 
+            this.lblNoLoadV3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoLoadV3.ForeColor = System.Drawing.Color.Blue;
+            this.lblNoLoadV3.Location = new System.Drawing.Point(647, 328);
+            this.lblNoLoadV3.Name = "lblNoLoadV3";
+            this.lblNoLoadV3.Size = new System.Drawing.Size(112, 16);
+            this.lblNoLoadV3.TabIndex = 64;
+            this.lblNoLoadV3.Text = "OC Voltage 3";
+            this.lblNoLoadV3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNoLoadV4
+            // 
+            this.lblNoLoadV4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoLoadV4.ForeColor = System.Drawing.Color.Blue;
+            this.lblNoLoadV4.Location = new System.Drawing.Point(647, 360);
+            this.lblNoLoadV4.Name = "lblNoLoadV4";
+            this.lblNoLoadV4.Size = new System.Drawing.Size(112, 16);
+            this.lblNoLoadV4.TabIndex = 65;
+            this.lblNoLoadV4.Text = "OC Voltage 4";
+            this.lblNoLoadV4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNoLoadV5
+            // 
+            this.lblNoLoadV5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoLoadV5.ForeColor = System.Drawing.Color.Blue;
+            this.lblNoLoadV5.Location = new System.Drawing.Point(647, 392);
+            this.lblNoLoadV5.Name = "lblNoLoadV5";
+            this.lblNoLoadV5.Size = new System.Drawing.Size(112, 16);
+            this.lblNoLoadV5.TabIndex = 66;
+            this.lblNoLoadV5.Text = "OC Voltage 5";
+            this.lblNoLoadV5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNoLoadV6
+            // 
+            this.lblNoLoadV6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoLoadV6.ForeColor = System.Drawing.Color.Blue;
+            this.lblNoLoadV6.Location = new System.Drawing.Point(647, 424);
+            this.lblNoLoadV6.Name = "lblNoLoadV6";
+            this.lblNoLoadV6.Size = new System.Drawing.Size(112, 16);
+            this.lblNoLoadV6.TabIndex = 67;
+            this.lblNoLoadV6.Text = "OC Voltage 6";
+            this.lblNoLoadV6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNoLoadV7
+            // 
+            this.lblNoLoadV7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoLoadV7.ForeColor = System.Drawing.Color.Blue;
+            this.lblNoLoadV7.Location = new System.Drawing.Point(647, 456);
+            this.lblNoLoadV7.Name = "lblNoLoadV7";
+            this.lblNoLoadV7.Size = new System.Drawing.Size(112, 16);
+            this.lblNoLoadV7.TabIndex = 68;
+            this.lblNoLoadV7.Text = "OC Voltage 7";
+            this.lblNoLoadV7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNoLoadV8
+            // 
+            this.lblNoLoadV8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoLoadV8.ForeColor = System.Drawing.Color.Blue;
+            this.lblNoLoadV8.Location = new System.Drawing.Point(647, 488);
+            this.lblNoLoadV8.Name = "lblNoLoadV8";
+            this.lblNoLoadV8.Size = new System.Drawing.Size(112, 16);
+            this.lblNoLoadV8.TabIndex = 69;
+            this.lblNoLoadV8.Text = "OC Voltage 8";
+            this.lblNoLoadV8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblID
+            // 
+            this.lblID.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(776, 216);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(90, 32);
+            this.lblID.TabIndex = 161;
+            this.lblID.Text = "ID Resistor  in Ohms";
+            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblID1
+            // 
+            this.lblID1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID1.ForeColor = System.Drawing.Color.Blue;
+            this.lblID1.Location = new System.Drawing.Point(776, 264);
+            this.lblID1.Name = "lblID1";
+            this.lblID1.Size = new System.Drawing.Size(90, 16);
+            this.lblID1.TabIndex = 162;
+            this.lblID1.Text = "ID Value 1";
+            this.lblID1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblID2
+            // 
+            this.lblID2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID2.ForeColor = System.Drawing.Color.Blue;
+            this.lblID2.Location = new System.Drawing.Point(776, 296);
+            this.lblID2.Name = "lblID2";
+            this.lblID2.Size = new System.Drawing.Size(90, 16);
+            this.lblID2.TabIndex = 163;
+            this.lblID2.Text = "ID Value 2";
+            this.lblID2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblID3
+            // 
+            this.lblID3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID3.ForeColor = System.Drawing.Color.Blue;
+            this.lblID3.Location = new System.Drawing.Point(776, 328);
+            this.lblID3.Name = "lblID3";
+            this.lblID3.Size = new System.Drawing.Size(90, 16);
+            this.lblID3.TabIndex = 164;
+            this.lblID3.Text = "ID Value 3";
+            this.lblID3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblID4
+            // 
+            this.lblID4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID4.ForeColor = System.Drawing.Color.Blue;
+            this.lblID4.Location = new System.Drawing.Point(776, 360);
+            this.lblID4.Name = "lblID4";
+            this.lblID4.Size = new System.Drawing.Size(90, 16);
+            this.lblID4.TabIndex = 165;
+            this.lblID4.Text = "ID Value 4";
+            this.lblID4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblID5
+            // 
+            this.lblID5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID5.ForeColor = System.Drawing.Color.Blue;
+            this.lblID5.Location = new System.Drawing.Point(776, 392);
+            this.lblID5.Name = "lblID5";
+            this.lblID5.Size = new System.Drawing.Size(90, 16);
+            this.lblID5.TabIndex = 166;
+            this.lblID5.Text = "ID Value 5";
+            this.lblID5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblID6
+            // 
+            this.lblID6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID6.ForeColor = System.Drawing.Color.Blue;
+            this.lblID6.Location = new System.Drawing.Point(776, 424);
+            this.lblID6.Name = "lblID6";
+            this.lblID6.Size = new System.Drawing.Size(90, 16);
+            this.lblID6.TabIndex = 167;
+            this.lblID6.Text = "ID Value 6";
+            this.lblID6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblID7
+            // 
+            this.lblID7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID7.ForeColor = System.Drawing.Color.Blue;
+            this.lblID7.Location = new System.Drawing.Point(776, 456);
+            this.lblID7.Name = "lblID7";
+            this.lblID7.Size = new System.Drawing.Size(90, 16);
+            this.lblID7.TabIndex = 168;
+            this.lblID7.Text = "ID Value 7";
+            this.lblID7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblID8
+            // 
+            this.lblID8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID8.ForeColor = System.Drawing.Color.Blue;
+            this.lblID8.Location = new System.Drawing.Point(776, 488);
+            this.lblID8.Name = "lblID8";
+            this.lblID8.Size = new System.Drawing.Size(90, 16);
+            this.lblID8.TabIndex = 169;
+            this.lblID8.Text = "ID Value 8";
+            this.lblID8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResult
+            // 
+            this.lblResult.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Location = new System.Drawing.Point(880, 221);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(90, 23);
+            this.lblResult.TabIndex = 79;
+            this.lblResult.Text = "Results";
+            this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResult1
+            // 
+            this.lblResult1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult1.ForeColor = System.Drawing.Color.Blue;
+            this.lblResult1.Location = new System.Drawing.Point(880, 264);
+            this.lblResult1.Name = "lblResult1";
+            this.lblResult1.Size = new System.Drawing.Size(90, 16);
+            this.lblResult1.TabIndex = 71;
+            this.lblResult1.Text = "Result 1";
+            this.lblResult1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResult2
+            // 
+            this.lblResult2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult2.ForeColor = System.Drawing.Color.Blue;
+            this.lblResult2.Location = new System.Drawing.Point(880, 296);
+            this.lblResult2.Name = "lblResult2";
+            this.lblResult2.Size = new System.Drawing.Size(90, 16);
+            this.lblResult2.TabIndex = 72;
+            this.lblResult2.Text = "Result 2";
+            this.lblResult2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResult3
+            // 
+            this.lblResult3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult3.ForeColor = System.Drawing.Color.Blue;
+            this.lblResult3.Location = new System.Drawing.Point(880, 328);
+            this.lblResult3.Name = "lblResult3";
+            this.lblResult3.Size = new System.Drawing.Size(90, 16);
+            this.lblResult3.TabIndex = 73;
+            this.lblResult3.Text = "Result 3";
+            this.lblResult3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResult4
+            // 
+            this.lblResult4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult4.ForeColor = System.Drawing.Color.Blue;
+            this.lblResult4.Location = new System.Drawing.Point(880, 360);
+            this.lblResult4.Name = "lblResult4";
+            this.lblResult4.Size = new System.Drawing.Size(90, 16);
+            this.lblResult4.TabIndex = 74;
+            this.lblResult4.Text = "Result 4";
+            this.lblResult4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResult5
+            // 
+            this.lblResult5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult5.ForeColor = System.Drawing.Color.Blue;
+            this.lblResult5.Location = new System.Drawing.Point(880, 392);
+            this.lblResult5.Name = "lblResult5";
+            this.lblResult5.Size = new System.Drawing.Size(90, 16);
+            this.lblResult5.TabIndex = 75;
+            this.lblResult5.Text = "Result 5";
+            this.lblResult5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResult6
+            // 
+            this.lblResult6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult6.ForeColor = System.Drawing.Color.Blue;
+            this.lblResult6.Location = new System.Drawing.Point(880, 424);
+            this.lblResult6.Name = "lblResult6";
+            this.lblResult6.Size = new System.Drawing.Size(90, 16);
+            this.lblResult6.TabIndex = 76;
+            this.lblResult6.Text = "Result 6";
+            this.lblResult6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResult7
+            // 
+            this.lblResult7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult7.ForeColor = System.Drawing.Color.Blue;
+            this.lblResult7.Location = new System.Drawing.Point(880, 456);
+            this.lblResult7.Name = "lblResult7";
+            this.lblResult7.Size = new System.Drawing.Size(90, 16);
+            this.lblResult7.TabIndex = 77;
+            this.lblResult7.Text = "Result 7";
+            this.lblResult7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResult8
+            // 
+            this.lblResult8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult8.ForeColor = System.Drawing.Color.Blue;
+            this.lblResult8.Location = new System.Drawing.Point(880, 488);
+            this.lblResult8.Name = "lblResult8";
+            this.lblResult8.Size = new System.Drawing.Size(90, 16);
+            this.lblResult8.TabIndex = 78;
+            this.lblResult8.Text = "Result 8";
+            this.lblResult8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblEnterSerNum
+            // 
+            this.lblEnterSerNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnterSerNum.Location = new System.Drawing.Point(16, 184);
+            this.lblEnterSerNum.Name = "lblEnterSerNum";
+            this.lblEnterSerNum.Size = new System.Drawing.Size(208, 16);
+            this.lblEnterSerNum.TabIndex = 80;
+            this.lblEnterSerNum.Text = "Enter Starting Serial Number  - ";
+            this.lblEnterSerNum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtStartSerNum
+            // 
+            this.txtStartSerNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStartSerNum.Location = new System.Drawing.Point(240, 181);
+            this.txtStartSerNum.MaxLength = 15;
+            this.txtStartSerNum.Name = "txtStartSerNum";
+            this.txtStartSerNum.Size = new System.Drawing.Size(112, 22);
+            this.txtStartSerNum.TabIndex = 81;
+            this.txtStartSerNum.TabStop = false;
+            this.txtStartSerNum.Text = "AV01050001";
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.Location = new System.Drawing.Point(392, 181);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(176, 23);
+            this.btnAccept.TabIndex = 150;
+            this.btnAccept.Text = "Accept Serial Number";
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(96, 528);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(80, 23);
+            this.btnStart.TabIndex = 159;
+            this.btnStart.Text = "Start Test";
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.Enabled = false;
+            this.btnStop.Location = new System.Drawing.Point(96, 528);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(80, 23);
+            this.btnStop.TabIndex = 84;
+            this.btnStop.TabStop = false;
+            this.btnStop.Text = "Stop Test";
+            this.btnStop.Visible = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblElapsed
+            // 
+            this.lblElapsed.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElapsed.Location = new System.Drawing.Point(376, 528);
+            this.lblElapsed.Name = "lblElapsed";
+            this.lblElapsed.Size = new System.Drawing.Size(140, 16);
+            this.lblElapsed.TabIndex = 85;
+            this.lblElapsed.Text = "Elapsed Test Time  -";
+            this.lblElapsed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblElapsedTime
+            // 
+            this.lblElapsedTime.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblElapsedTime.ForeColor = System.Drawing.Color.Blue;
+            this.lblElapsedTime.Location = new System.Drawing.Point(528, 528);
+            this.lblElapsedTime.Name = "lblElapsedTime";
+            this.lblElapsedTime.Size = new System.Drawing.Size(144, 16);
+            this.lblElapsedTime.TabIndex = 86;
+            this.lblElapsedTime.Text = "Elapsed Time Display";
+            this.lblElapsedTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblStartDateTime
+            // 
+            this.lblStartDateTime.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDateTime.ForeColor = System.Drawing.Color.Blue;
+            this.lblStartDateTime.Location = new System.Drawing.Point(528, 552);
+            this.lblStartDateTime.Name = "lblStartDateTime";
+            this.lblStartDateTime.Size = new System.Drawing.Size(160, 16);
+            this.lblStartDateTime.TabIndex = 87;
+            this.lblStartDateTime.Text = "Date Time Display";
+            this.lblStartDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblStopDateTime
+            // 
+            this.lblStopDateTime.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStopDateTime.ForeColor = System.Drawing.Color.Blue;
+            this.lblStopDateTime.Location = new System.Drawing.Point(528, 576);
+            this.lblStopDateTime.Name = "lblStopDateTime";
+            this.lblStopDateTime.Size = new System.Drawing.Size(160, 16);
+            this.lblStopDateTime.TabIndex = 88;
+            this.lblStopDateTime.Text = "Date Time Display";
+            this.lblStopDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(40, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(176, 56);
+            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblTestTitle
+            // 
+            this.lblTestTitle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestTitle.Location = new System.Drawing.Point(280, 40);
+            this.lblTestTitle.Name = "lblTestTitle";
+            this.lblTestTitle.Size = new System.Drawing.Size(336, 23);
+            this.lblTestTitle.TabIndex = 90;
+            this.lblTestTitle.Text = "1008-1003-01 Battery Pack Test";
+            this.lblTestTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Location = new System.Drawing.Point(96, 576);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(80, 23);
+            this.btnQuit.TabIndex = 91;
+            this.btnQuit.TabStop = false;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // lblStartTime
+            // 
+            this.lblStartTime.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartTime.Location = new System.Drawing.Point(376, 552);
+            this.lblStartTime.Name = "lblStartTime";
+            this.lblStartTime.Size = new System.Drawing.Size(140, 16);
+            this.lblStartTime.TabIndex = 97;
+            this.lblStartTime.Text = "Test Starting Time -";
+            this.lblStartTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblTestComplete
+            // 
+            this.lblTestComplete.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestComplete.Location = new System.Drawing.Point(356, 576);
+            this.lblTestComplete.Name = "lblTestComplete";
+            this.lblTestComplete.Size = new System.Drawing.Size(160, 16);
+            this.lblTestComplete.TabIndex = 98;
+            this.lblTestComplete.Text = "Test Completition Time -";
+            this.lblTestComplete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtLotNum
+            // 
+            this.txtLotNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLotNum.Location = new System.Drawing.Point(688, 109);
+            this.txtLotNum.MaxLength = 15;
+            this.txtLotNum.Name = "txtLotNum";
+            this.txtLotNum.Size = new System.Drawing.Size(120, 22);
+            this.txtLotNum.TabIndex = 100;
+            this.txtLotNum.TabStop = false;
+            this.txtLotNum.Text = "Lot Number";
+            // 
+            // lblLotNum
+            // 
+            this.lblLotNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLotNum.Location = new System.Drawing.Point(536, 112);
+            this.lblLotNum.Name = "lblLotNum";
+            this.lblLotNum.Size = new System.Drawing.Size(136, 16);
+            this.lblLotNum.TabIndex = 99;
+            this.lblLotNum.Text = "Enter lot number -";
+            this.lblLotNum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblFileName
+            // 
+            this.lblFileName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFileName.Location = new System.Drawing.Point(240, 148);
+            this.lblFileName.Name = "lblFileName";
+            this.lblFileName.Size = new System.Drawing.Size(232, 16);
+            this.lblFileName.TabIndex = 102;
+            this.lblFileName.Text = "Database file name";
+            this.lblFileName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnSelectFile
+            // 
+            this.btnSelectFile.Location = new System.Drawing.Point(96, 145);
+            this.btnSelectFile.Name = "btnSelectFile";
+            this.btnSelectFile.Size = new System.Drawing.Size(128, 23);
+            this.btnSelectFile.TabIndex = 101;
+            this.btnSelectFile.TabStop = false;
+            this.btnSelectFile.Text = "Select Output File";
+            this.btnSelectFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
+            // 
+            // txtPoNumbr
+            // 
+            this.txtPoNumbr.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPoNumbr.Location = new System.Drawing.Point(240, 109);
+            this.txtPoNumbr.MaxLength = 15;
+            this.txtPoNumbr.Name = "txtPoNumbr";
+            this.txtPoNumbr.Size = new System.Drawing.Size(120, 22);
+            this.txtPoNumbr.TabIndex = 104;
+            this.txtPoNumbr.TabStop = false;
+            this.txtPoNumbr.Text = "PO Number";
+            // 
+            // lblPoNumbr
+            // 
+            this.lblPoNumbr.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPoNumbr.Location = new System.Drawing.Point(8, 112);
+            this.lblPoNumbr.Name = "lblPoNumbr";
+            this.lblPoNumbr.Size = new System.Drawing.Size(216, 16);
+            this.lblPoNumbr.TabIndex = 103;
+            this.lblPoNumbr.Text = "Enter purchase order number -";
+            this.lblPoNumbr.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtCellCode
+            // 
+            this.txtCellCode.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCellCode.Location = new System.Drawing.Point(688, 145);
+            this.txtCellCode.MaxLength = 15;
+            this.txtCellCode.Name = "txtCellCode";
+            this.txtCellCode.Size = new System.Drawing.Size(120, 22);
+            this.txtCellCode.TabIndex = 106;
+            this.txtCellCode.TabStop = false;
+            this.txtCellCode.Text = "Cell Date Code";
+            // 
+            // lblCellCode
+            // 
+            this.lblCellCode.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCellCode.Location = new System.Drawing.Point(528, 148);
+            this.lblCellCode.Name = "lblCellCode";
+            this.lblCellCode.Size = new System.Drawing.Size(144, 16);
+            this.lblCellCode.TabIndex = 105;
+            this.lblCellCode.Text = "Enter Cell Date Code -";
+            this.lblCellCode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblPackSerNums
+            // 
+            this.lblPackSerNums.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPackSerNums.Location = new System.Drawing.Point(245, 216);
+            this.lblPackSerNums.Name = "lblPackSerNums";
+            this.lblPackSerNums.Size = new System.Drawing.Size(112, 32);
+            this.lblPackSerNums.TabIndex = 107;
+            this.lblPackSerNums.Text = "Board Serial Number";
+            this.lblPackSerNums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtPackSerNum1
+            // 
+            this.txtPackSerNum1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackSerNum1.Location = new System.Drawing.Point(245, 261);
+            this.txtPackSerNum1.MaxLength = 40;
+            this.txtPackSerNum1.Name = "txtPackSerNum1";
+            this.txtPackSerNum1.Size = new System.Drawing.Size(112, 22);
+            this.txtPackSerNum1.TabIndex = 151;
+            this.txtPackSerNum1.Text = "AV01050001";
+            this.txtPackSerNum1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtPackSerNum2
+            // 
+            this.txtPackSerNum2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackSerNum2.Location = new System.Drawing.Point(245, 293);
+            this.txtPackSerNum2.MaxLength = 15;
+            this.txtPackSerNum2.Name = "txtPackSerNum2";
+            this.txtPackSerNum2.Size = new System.Drawing.Size(112, 22);
+            this.txtPackSerNum2.TabIndex = 152;
+            this.txtPackSerNum2.Text = "AV01050001";
+            // 
+            // txtPackSerNum3
+            // 
+            this.txtPackSerNum3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackSerNum3.Location = new System.Drawing.Point(245, 325);
+            this.txtPackSerNum3.MaxLength = 15;
+            this.txtPackSerNum3.Name = "txtPackSerNum3";
+            this.txtPackSerNum3.Size = new System.Drawing.Size(112, 22);
+            this.txtPackSerNum3.TabIndex = 153;
+            this.txtPackSerNum3.Text = "AV01050001";
+            // 
+            // txtPackSerNum4
+            // 
+            this.txtPackSerNum4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackSerNum4.Location = new System.Drawing.Point(245, 357);
+            this.txtPackSerNum4.MaxLength = 15;
+            this.txtPackSerNum4.Name = "txtPackSerNum4";
+            this.txtPackSerNum4.Size = new System.Drawing.Size(112, 22);
+            this.txtPackSerNum4.TabIndex = 154;
+            this.txtPackSerNum4.Text = "AV01050001";
+            // 
+            // txtPackSerNum5
+            // 
+            this.txtPackSerNum5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackSerNum5.Location = new System.Drawing.Point(245, 389);
+            this.txtPackSerNum5.MaxLength = 15;
+            this.txtPackSerNum5.Name = "txtPackSerNum5";
+            this.txtPackSerNum5.Size = new System.Drawing.Size(112, 22);
+            this.txtPackSerNum5.TabIndex = 155;
+            this.txtPackSerNum5.Text = "AV01050001";
+            // 
+            // txtPackSerNum6
+            // 
+            this.txtPackSerNum6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackSerNum6.Location = new System.Drawing.Point(245, 421);
+            this.txtPackSerNum6.MaxLength = 15;
+            this.txtPackSerNum6.Name = "txtPackSerNum6";
+            this.txtPackSerNum6.Size = new System.Drawing.Size(112, 22);
+            this.txtPackSerNum6.TabIndex = 156;
+            this.txtPackSerNum6.Text = "AV01050001";
+            // 
+            // txtPackSerNum7
+            // 
+            this.txtPackSerNum7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackSerNum7.Location = new System.Drawing.Point(245, 453);
+            this.txtPackSerNum7.MaxLength = 15;
+            this.txtPackSerNum7.Name = "txtPackSerNum7";
+            this.txtPackSerNum7.Size = new System.Drawing.Size(112, 22);
+            this.txtPackSerNum7.TabIndex = 157;
+            this.txtPackSerNum7.Text = "AV01050001";
+            // 
+            // txtPackSerNum8
+            // 
+            this.txtPackSerNum8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackSerNum8.Location = new System.Drawing.Point(245, 485);
+            this.txtPackSerNum8.MaxLength = 15;
+            this.txtPackSerNum8.Name = "txtPackSerNum8";
+            this.txtPackSerNum8.Size = new System.Drawing.Size(112, 22);
+            this.txtPackSerNum8.TabIndex = 158;
+            this.txtPackSerNum8.Text = "AV01050001";
+            // 
+            // chkIDRes
+            // 
+            this.chkIDRes.Location = new System.Drawing.Point(640, 181);
+            this.chkIDRes.Name = "chkIDRes";
+            this.chkIDRes.Size = new System.Drawing.Size(128, 23);
+            this.chkIDRes.TabIndex = 160;
+            this.chkIDRes.Text = "Run ID Pin Test";
+            this.chkIDRes.CheckedChanged += new System.EventHandler(this.chkIDRes_CheckedChanged);
+            // 
+            // chkIDResOnly
+            // 
+            this.chkIDResOnly.Enabled = false;
+            this.chkIDResOnly.Location = new System.Drawing.Point(792, 181);
+            this.chkIDResOnly.Name = "chkIDResOnly";
+            this.chkIDResOnly.Size = new System.Drawing.Size(160, 23);
+            this.chkIDResOnly.TabIndex = 170;
+            this.chkIDResOnly.Text = "Only Run ID Pin Test";
+            // 
+            // Zoll_2015
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(7, 15);
+            this.ClientSize = new System.Drawing.Size(984, 635);
+            this.Controls.Add(this.chkIDResOnly);
+            this.Controls.Add(this.lblID8);
+            this.Controls.Add(this.lblID7);
+            this.Controls.Add(this.lblID6);
+            this.Controls.Add(this.lblID5);
+            this.Controls.Add(this.lblID4);
+            this.Controls.Add(this.lblID3);
+            this.Controls.Add(this.lblID2);
+            this.Controls.Add(this.lblID1);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.chkIDRes);
+            this.Controls.Add(this.txtPackSerNum8);
+            this.Controls.Add(this.txtPackSerNum7);
+            this.Controls.Add(this.txtPackSerNum6);
+            this.Controls.Add(this.txtPackSerNum5);
+            this.Controls.Add(this.txtPackSerNum4);
+            this.Controls.Add(this.txtPackSerNum3);
+            this.Controls.Add(this.txtPackSerNum2);
+            this.Controls.Add(this.txtPackSerNum1);
+            this.Controls.Add(this.lblPackSerNums);
+            this.Controls.Add(this.txtCellCode);
+            this.Controls.Add(this.lblCellCode);
+            this.Controls.Add(this.txtPoNumbr);
+            this.Controls.Add(this.lblPoNumbr);
+            this.Controls.Add(this.lblFileName);
+            this.Controls.Add(this.btnSelectFile);
+            this.Controls.Add(this.txtLotNum);
+            this.Controls.Add(this.lblLotNum);
+            this.Controls.Add(this.lblTestComplete);
+            this.Controls.Add(this.lblStartTime);
+            this.Controls.Add(this.btnQuit);
+            this.Controls.Add(this.lblTestTitle);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblStopDateTime);
+            this.Controls.Add(this.lblStartDateTime);
+            this.Controls.Add(this.lblElapsedTime);
+            this.Controls.Add(this.lblElapsed);
+            this.Controls.Add(this.btnStop);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.btnAccept);
+            this.Controls.Add(this.txtStartSerNum);
+            this.Controls.Add(this.lblEnterSerNum);
+            this.Controls.Add(this.lblResult);
+            this.Controls.Add(this.lblResult8);
+            this.Controls.Add(this.lblResult7);
+            this.Controls.Add(this.lblResult6);
+            this.Controls.Add(this.lblResult5);
+            this.Controls.Add(this.lblResult4);
+            this.Controls.Add(this.lblResult3);
+            this.Controls.Add(this.lblResult2);
+            this.Controls.Add(this.lblResult1);
+            this.Controls.Add(this.lblNoLoadV);
+            this.Controls.Add(this.lblNoLoadV8);
+            this.Controls.Add(this.lblNoLoadV7);
+            this.Controls.Add(this.lblNoLoadV6);
+            this.Controls.Add(this.lblNoLoadV5);
+            this.Controls.Add(this.lblNoLoadV4);
+            this.Controls.Add(this.lblNoLoadV3);
+            this.Controls.Add(this.lblNoLoadV2);
+            this.Controls.Add(this.lblNoLoadV1);
+            this.Controls.Add(this.lblLoadV);
+            this.Controls.Add(this.lblLoadV8);
+            this.Controls.Add(this.lblLoadV7);
+            this.Controls.Add(this.lblLoadV6);
+            this.Controls.Add(this.lblLoadV5);
+            this.Controls.Add(this.lblLoadV4);
+            this.Controls.Add(this.lblLoadV3);
+            this.Controls.Add(this.lblLoadV2);
+            this.Controls.Add(this.lblLoadV1);
+            this.Controls.Add(this.lblOcVoltage);
+            this.Controls.Add(this.lblOcV8);
+            this.Controls.Add(this.lblOcV7);
+            this.Controls.Add(this.lblOcV6);
+            this.Controls.Add(this.lblOcV5);
+            this.Controls.Add(this.lblOcV4);
+            this.Controls.Add(this.lblOcV3);
+            this.Controls.Add(this.lblOcV2);
+            this.Controls.Add(this.lblOcV1);
+            this.Controls.Add(this.lblSerNum8);
+            this.Controls.Add(this.lblSerNum7);
+            this.Controls.Add(this.lblSerNum6);
+            this.Controls.Add(this.lblSerNum5);
+            this.Controls.Add(this.lblSerNum4);
+            this.Controls.Add(this.lblSerNum3);
+            this.Controls.Add(this.lblSerNum2);
+            this.Controls.Add(this.lblSerNum1);
+            this.Controls.Add(this.lblBattery8);
+            this.Controls.Add(this.lblBattery7);
+            this.Controls.Add(this.lblBattery6);
+            this.Controls.Add(this.lblBattery5);
+            this.Controls.Add(this.lblBattery4);
+            this.Controls.Add(this.lblBattery3);
+            this.Controls.Add(this.lblBattery2);
+            this.Controls.Add(this.lblSerialNums);
+            this.Controls.Add(this.lblBattery1);
+            this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "Zoll_2015";
+            this.Text = "Zoll_2015";
+            this.Load += new System.EventHandler(this.Zoll_2015_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 		#endregion
@@ -2349,7 +2354,12 @@ namespace BatteryTest2
 			}
 		}
 
+        private void Zoll_2015_Load(object sender, EventArgs e)
+        {
+
+        }
+
 	}	//End of public class Test2 : System.Windows.Forms.Form
 
-}	//End of namespace BatteryTest2
+}	//End of namespace Zoll_2015
 
