@@ -35,7 +35,7 @@ namespace BatteryTest2
 	/// <summary>
 	/// Summary description for Form1.
 	/// </summary>
-	public class Test2 : System.Windows.Forms.Form
+	public class Zoll_2015 : System.Windows.Forms.Form
 	{
 		private System.ComponentModel.IContainer components;
 		
@@ -221,7 +221,7 @@ namespace BatteryTest2
 		[DllImport("cbw32.dll")]
 		internal static extern int cbGetConfig (int InfoType, int BoardNum, int DevNum,int ConfigItem, out int ConfigVal);
 
-		public Test2()
+		public Zoll_2015()
 		{
 			MccDaq.ErrorInfo ULStat1;
 			MccDaq.ErrorInfo ULStat2;
@@ -240,8 +240,8 @@ namespace BatteryTest2
 			//     MccDaq.ErrorHandling.StopAll   :if an error is encountered, the program will stop
 
 //	Comment the following 2 lines out if no hardware is attached		
-			ULStat1 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
-			ULStat2 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
+			//ULStat1 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
+			//ULStat2 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
 		
 			// Create a new MccBoard object for Board 1 & 2
 			DaqBoard1 = new MccDaq.MccBoard(1);
@@ -331,7 +331,7 @@ namespace BatteryTest2
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(Test2));
+			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(Zoll_2015));
 			this.lblBattery1 = new System.Windows.Forms.Label();
 			this.lblSerialNums = new System.Windows.Forms.Label();
 			this.lblBattery2 = new System.Windows.Forms.Label();
@@ -1550,7 +1550,7 @@ namespace BatteryTest2
 		[STAThread]
 		static void Main() 
 		{
-			Application.Run(new Test2());
+			Application.Run(new Zoll_2015());
 		}
 
 		/// <summary>
