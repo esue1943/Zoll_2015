@@ -1,6 +1,6 @@
 // ==============================================================================
 //
-//  File:							Test2.CS
+//  File:							Zoll_2015.CS
 //
 //
 //  Purpose:						Tests a series of batteries per the customers
@@ -16,7 +16,7 @@
 //
 //	Author:							Richard W. Bryant
 //
-//	Copyright:						2005 Elizabeth Sue Productions, Ltd.
+//	Copyright:						2005 - 2015 Elizabeth Sue Productions, Ltd.
 //
 // ==============================================================================
 
