@@ -1119,7 +1119,7 @@ namespace Zoll_2015
             this.txtStartSerNum.Size = new System.Drawing.Size(279, 22);
             this.txtStartSerNum.TabIndex = 81;
             this.txtStartSerNum.TabStop = false;
-            this.txtStartSerNum.Text = "AV01050001";
+            this.txtStartSerNum.Text = "(01)00847946016838  (21)AV11150001";
             this.txtStartSerNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtStartSerNum.TextChanged += new System.EventHandler(this.txtStartSerNum_TextChanged);
             // 
@@ -1363,6 +1363,7 @@ namespace Zoll_2015
             this.txtPackSerNum2.Size = new System.Drawing.Size(112, 22);
             this.txtPackSerNum2.TabIndex = 152;
             this.txtPackSerNum2.Text = "AV01050001";
+            this.txtPackSerNum2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPackSerNum2.TextChanged += new System.EventHandler(this.txtPackSerNum2_TextChanged);
             // 
             // txtPackSerNum3
@@ -1374,6 +1375,7 @@ namespace Zoll_2015
             this.txtPackSerNum3.Size = new System.Drawing.Size(112, 22);
             this.txtPackSerNum3.TabIndex = 153;
             this.txtPackSerNum3.Text = "AV01050001";
+            this.txtPackSerNum3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPackSerNum4
             // 
@@ -1384,6 +1386,7 @@ namespace Zoll_2015
             this.txtPackSerNum4.Size = new System.Drawing.Size(112, 22);
             this.txtPackSerNum4.TabIndex = 154;
             this.txtPackSerNum4.Text = "AV01050001";
+            this.txtPackSerNum4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPackSerNum5
             // 
@@ -1394,6 +1397,7 @@ namespace Zoll_2015
             this.txtPackSerNum5.Size = new System.Drawing.Size(112, 22);
             this.txtPackSerNum5.TabIndex = 155;
             this.txtPackSerNum5.Text = "AV01050001";
+            this.txtPackSerNum5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPackSerNum6
             // 
@@ -1404,6 +1408,7 @@ namespace Zoll_2015
             this.txtPackSerNum6.Size = new System.Drawing.Size(112, 22);
             this.txtPackSerNum6.TabIndex = 156;
             this.txtPackSerNum6.Text = "AV01050001";
+            this.txtPackSerNum6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPackSerNum7
             // 
@@ -1414,6 +1419,7 @@ namespace Zoll_2015
             this.txtPackSerNum7.Size = new System.Drawing.Size(112, 22);
             this.txtPackSerNum7.TabIndex = 157;
             this.txtPackSerNum7.Text = "AV01050001";
+            this.txtPackSerNum7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPackSerNum8
             // 
@@ -1424,6 +1430,7 @@ namespace Zoll_2015
             this.txtPackSerNum8.Size = new System.Drawing.Size(112, 22);
             this.txtPackSerNum8.TabIndex = 158;
             this.txtPackSerNum8.Text = "AV01050001";
+            this.txtPackSerNum8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // chkIDRes
             // 
