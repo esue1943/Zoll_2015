@@ -542,7 +542,7 @@ namespace Zoll_2015
             this.lblSerNum2.Size = new System.Drawing.Size(112, 16);
             this.lblSerNum2.TabIndex = 37;
             this.lblSerNum2.Text = "Serial Number 2";
-            this.lblSerNum2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSerNum2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSerNum3
             // 
@@ -553,7 +553,7 @@ namespace Zoll_2015
             this.lblSerNum3.Size = new System.Drawing.Size(112, 16);
             this.lblSerNum3.TabIndex = 38;
             this.lblSerNum3.Text = "Serial Number 3";
-            this.lblSerNum3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSerNum3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSerNum4
             // 
@@ -564,7 +564,7 @@ namespace Zoll_2015
             this.lblSerNum4.Size = new System.Drawing.Size(112, 16);
             this.lblSerNum4.TabIndex = 39;
             this.lblSerNum4.Text = "Serial Number 4";
-            this.lblSerNum4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSerNum4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSerNum5
             // 
@@ -575,7 +575,7 @@ namespace Zoll_2015
             this.lblSerNum5.Size = new System.Drawing.Size(112, 16);
             this.lblSerNum5.TabIndex = 40;
             this.lblSerNum5.Text = "Serial Number 5";
-            this.lblSerNum5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSerNum5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSerNum6
             // 
@@ -586,7 +586,7 @@ namespace Zoll_2015
             this.lblSerNum6.Size = new System.Drawing.Size(112, 16);
             this.lblSerNum6.TabIndex = 41;
             this.lblSerNum6.Text = "Serial Number 6";
-            this.lblSerNum6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSerNum6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSerNum7
             // 
@@ -597,7 +597,7 @@ namespace Zoll_2015
             this.lblSerNum7.Size = new System.Drawing.Size(112, 16);
             this.lblSerNum7.TabIndex = 42;
             this.lblSerNum7.Text = "Serial Number 7";
-            this.lblSerNum7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSerNum7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSerNum8
             // 
@@ -608,7 +608,7 @@ namespace Zoll_2015
             this.lblSerNum8.Size = new System.Drawing.Size(112, 16);
             this.lblSerNum8.TabIndex = 43;
             this.lblSerNum8.Text = "Serial Number 8";
-            this.lblSerNum8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSerNum8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblOcVoltage
             // 
@@ -1363,6 +1363,7 @@ namespace Zoll_2015
             this.txtPackSerNum2.Size = new System.Drawing.Size(112, 22);
             this.txtPackSerNum2.TabIndex = 152;
             this.txtPackSerNum2.Text = "AV01050001";
+            this.txtPackSerNum2.TextChanged += new System.EventHandler(this.txtPackSerNum2_TextChanged);
             // 
             // txtPackSerNum3
             // 
@@ -1613,7 +1614,7 @@ namespace Zoll_2015
 					strMechanicalFit[i] = "Pass";		// Set Pass if pack connected
 
 					strPackSerNum[i] = WeekYearTxt + StartSerialNum.ToString("D4");     //rwb 5/27/2015
-                    lblSerialNum[i].Text = WeekYearTxt + StartSerialNum.ToString("D4");
+                    lblSerialNum[i].Text = WeekYearTxt.Remove(0,StartSerNumTxtLen - 10) + StartSerialNum.ToString("D4");
                     StartSerialNum++;
 					NextStartSerialNum = StartSerialNum;
 					TestMask = (ushort)(TestMask | Bit);		// Turn on the mask bit
@@ -2366,6 +2367,11 @@ namespace Zoll_2015
         }
 
         private void txtStartSerNum_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPackSerNum2_TextChanged(object sender, EventArgs e)
         {
 
         }
