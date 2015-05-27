@@ -215,6 +215,7 @@ namespace Zoll_2015
 		private string WeekYearTxt;
 		private System.Windows.Forms.CheckBox chkIDResOnly;
         private TextBox txtTestTitle;
+        private Label lblTestStatus;
 		private string SerNumTxt;
 
 		/// <summary>
@@ -301,7 +302,8 @@ namespace Zoll_2015
 				ULStat2 = DaqBoard2.DConfigPort(PortNumCH, Direction);
 			}
 
-			txtStartSerNum.Text = "";	// Initialize the starting serial number
+            lblTestStatus.Text = "";    // Initialize the test status - rwb 5/27/2015
+            txtStartSerNum.Text = "";	// Initialize the starting serial number
 			txtLotNum.Text = "";	// Initialize the Lot number
 			txtPoNumbr.Text = "";	// Initialize the Purchase order number
 			txtCellCode.Text = "";	// Initialize the Cell code
@@ -431,6 +433,7 @@ namespace Zoll_2015
             this.chkIDRes = new System.Windows.Forms.CheckBox();
             this.chkIDResOnly = new System.Windows.Forms.CheckBox();
             this.txtTestTitle = new System.Windows.Forms.TextBox();
+            this.lblTestStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1454,10 +1457,23 @@ namespace Zoll_2015
             this.txtTestTitle.Text = "1008-1003-01 Battery Pack Test";
             this.txtTestTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // lblTestStatus
+            // 
+            this.lblTestStatus.AutoSize = true;
+            this.lblTestStatus.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestStatus.Location = new System.Drawing.Point(210, 532);
+            this.lblTestStatus.Name = "lblTestStatus";
+            this.lblTestStatus.Size = new System.Drawing.Size(135, 18);
+            this.lblTestStatus.TabIndex = 171;
+            this.lblTestStatus.Text = "Test Complete";
+            this.lblTestStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTestStatus.Click += new System.EventHandler(this.lblTestStatus_Click);
+            // 
             // Zoll_2015
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 15);
             this.ClientSize = new System.Drawing.Size(984, 635);
+            this.Controls.Add(this.lblTestStatus);
             this.Controls.Add(this.txtTestTitle);
             this.Controls.Add(this.chkIDResOnly);
             this.Controls.Add(this.lblID8);
@@ -1882,6 +1898,8 @@ namespace Zoll_2015
 			int i;
 			ushort Bit;
 
+            lblTestStatus.Text = "Test Started";    //rwb 5/27/2015
+
 			counter = counter + 1; 
 			elapsedTimeCtr = elapsedTimeCtr + 1;
 			lblElapsedTime.Text = elapsedTimeCtr.ToString("F2") + " seconds";
@@ -1978,6 +1996,9 @@ namespace Zoll_2015
 							lblStopDateTime.Text, lblResults[i].Text, lblPreTestVtg[i].Text,
 							lblLoadVtg[i].Text, lblNoLoadVtg[i].Text, lblIDRes[i].Text,
 							strMechanicalFit[i]);		// Save the test data - rwb 5/27/2015
+
+                        lblTestStatus.Text = "Test Completed";    //rwb 5/27/2015
+
 					}
 					break;
 
@@ -2384,6 +2405,11 @@ namespace Zoll_2015
         }
 
         private void txtPackSerNum2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTestStatus_Click(object sender, EventArgs e)
         {
 
         }
