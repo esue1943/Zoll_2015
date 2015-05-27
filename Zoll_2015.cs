@@ -243,8 +243,8 @@ namespace Zoll_2015
 			//     MccDaq.ErrorHandling.StopAll   :if an error is encountered, the program will stop
 
 //	Comment the following 2 lines out if no hardware is attached		
-//rwb			ULStat1 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
-//rwb			ULStat2 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
+			ULStat1 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
+			ULStat2 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
 		
 			// Create a new MccBoard object for Board 1 & 2
 			DaqBoard1 = new MccDaq.MccBoard(1);
@@ -280,10 +280,10 @@ namespace Zoll_2015
 			Threshold = 11.0F;			// Set threshold voltage to 11 volts.
 
 			BoardNum = 1;		// Get board 1 serial #
-//rwb			cbGetConfig(InfoType,BoardNum, 0, ConfigType, out Board1SerialNum);
+			cbGetConfig(InfoType,BoardNum, 0, ConfigType, out Board1SerialNum);
 	
 			BoardNum = 2;		// Get board 2 serial #
-//rwb			cbGetConfig(InfoType,BoardNum, 0, ConfigType, out Board2SerialNum);
+			cbGetConfig(InfoType,BoardNum, 0, ConfigType, out Board2SerialNum);
 
 			// The relay board is connected to the miniLAB with serial Number 1
 			if(Board1SerialNum == 1)
@@ -1627,7 +1627,6 @@ namespace Zoll_2015
 			for (i=0; i < MaxChan; ++i)		// Look for channels with batteries connected
 			{
 				Test = Math.Abs(SaveEngUnits[i]);
-                Test = Threshold;           // remove this rwb 5/26/2015
 				if (Test < Threshold)
 				{
 					TestChannel[i] = false;
