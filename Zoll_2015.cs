@@ -1119,8 +1119,7 @@ namespace Zoll_2015
             this.txtStartSerNum.MaxLength = 40;
             this.txtStartSerNum.Name = "txtStartSerNum";
             this.txtStartSerNum.Size = new System.Drawing.Size(279, 22);
-            this.txtStartSerNum.TabIndex = 81;
-            this.txtStartSerNum.TabStop = false;
+            this.txtStartSerNum.TabIndex = 5;
             this.txtStartSerNum.Text = "(01)00847946016838  (21)AV11150001";
             this.txtStartSerNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtStartSerNum.TextChanged += new System.EventHandler(this.txtStartSerNum_TextChanged);
@@ -1130,7 +1129,7 @@ namespace Zoll_2015
             this.btnAccept.Location = new System.Drawing.Point(504, 181);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(149, 23);
-            this.btnAccept.TabIndex = 150;
+            this.btnAccept.TabIndex = 6;
             this.btnAccept.Text = "Accept Serial Number";
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
@@ -1139,18 +1138,16 @@ namespace Zoll_2015
             this.btnStart.Location = new System.Drawing.Point(96, 528);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(80, 23);
-            this.btnStart.TabIndex = 159;
+            this.btnStart.TabIndex = 16;
             this.btnStart.Text = "Start Test";
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnStop
             // 
-            this.btnStop.Enabled = false;
-            this.btnStop.Location = new System.Drawing.Point(96, 528);
+            this.btnStop.Location = new System.Drawing.Point(95, 528);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(80, 23);
-            this.btnStop.TabIndex = 84;
-            this.btnStop.TabStop = false;
+            this.btnStop.TabIndex = 17;
             this.btnStop.Text = "Stop Test";
             this.btnStop.Visible = false;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
@@ -1226,8 +1223,7 @@ namespace Zoll_2015
             this.btnQuit.Location = new System.Drawing.Point(96, 576);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(80, 23);
-            this.btnQuit.TabIndex = 91;
-            this.btnQuit.TabStop = false;
+            this.btnQuit.TabIndex = 18;
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -1258,8 +1254,7 @@ namespace Zoll_2015
             this.txtLotNum.MaxLength = 15;
             this.txtLotNum.Name = "txtLotNum";
             this.txtLotNum.Size = new System.Drawing.Size(120, 22);
-            this.txtLotNum.TabIndex = 100;
-            this.txtLotNum.TabStop = false;
+            this.txtLotNum.TabIndex = 2;
             this.txtLotNum.Text = "Lot Number";
             // 
             // lblLotNum
@@ -1287,8 +1282,7 @@ namespace Zoll_2015
             this.btnSelectFile.Location = new System.Drawing.Point(96, 145);
             this.btnSelectFile.Name = "btnSelectFile";
             this.btnSelectFile.Size = new System.Drawing.Size(128, 23);
-            this.btnSelectFile.TabIndex = 101;
-            this.btnSelectFile.TabStop = false;
+            this.btnSelectFile.TabIndex = 3;
             this.btnSelectFile.Text = "Select Output File";
             this.btnSelectFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
@@ -1300,8 +1294,7 @@ namespace Zoll_2015
             this.txtPoNumbr.MaxLength = 15;
             this.txtPoNumbr.Name = "txtPoNumbr";
             this.txtPoNumbr.Size = new System.Drawing.Size(120, 22);
-            this.txtPoNumbr.TabIndex = 104;
-            this.txtPoNumbr.TabStop = false;
+            this.txtPoNumbr.TabIndex = 1;
             this.txtPoNumbr.Text = "PO Number";
             // 
             // lblPoNumbr
@@ -1321,8 +1314,7 @@ namespace Zoll_2015
             this.txtCellCode.MaxLength = 15;
             this.txtCellCode.Name = "txtCellCode";
             this.txtCellCode.Size = new System.Drawing.Size(120, 22);
-            this.txtCellCode.TabIndex = 106;
-            this.txtCellCode.TabStop = false;
+            this.txtCellCode.TabIndex = 4;
             this.txtCellCode.Text = "Cell Date Code";
             // 
             // lblCellCode
@@ -1352,7 +1344,7 @@ namespace Zoll_2015
             this.txtPackSerNum1.MaxLength = 40;
             this.txtPackSerNum1.Name = "txtPackSerNum1";
             this.txtPackSerNum1.Size = new System.Drawing.Size(112, 22);
-            this.txtPackSerNum1.TabIndex = 151;
+            this.txtPackSerNum1.TabIndex = 7;
             this.txtPackSerNum1.Text = "AV01050001";
             this.txtPackSerNum1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1363,7 +1355,7 @@ namespace Zoll_2015
             this.txtPackSerNum2.MaxLength = 15;
             this.txtPackSerNum2.Name = "txtPackSerNum2";
             this.txtPackSerNum2.Size = new System.Drawing.Size(112, 22);
-            this.txtPackSerNum2.TabIndex = 152;
+            this.txtPackSerNum2.TabIndex = 8;
             this.txtPackSerNum2.Text = "AV01050001";
             this.txtPackSerNum2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPackSerNum2.TextChanged += new System.EventHandler(this.txtPackSerNum2_TextChanged);
@@ -1375,7 +1367,7 @@ namespace Zoll_2015
             this.txtPackSerNum3.MaxLength = 15;
             this.txtPackSerNum3.Name = "txtPackSerNum3";
             this.txtPackSerNum3.Size = new System.Drawing.Size(112, 22);
-            this.txtPackSerNum3.TabIndex = 153;
+            this.txtPackSerNum3.TabIndex = 9;
             this.txtPackSerNum3.Text = "AV01050001";
             this.txtPackSerNum3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1386,7 +1378,7 @@ namespace Zoll_2015
             this.txtPackSerNum4.MaxLength = 15;
             this.txtPackSerNum4.Name = "txtPackSerNum4";
             this.txtPackSerNum4.Size = new System.Drawing.Size(112, 22);
-            this.txtPackSerNum4.TabIndex = 154;
+            this.txtPackSerNum4.TabIndex = 10;
             this.txtPackSerNum4.Text = "AV01050001";
             this.txtPackSerNum4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1397,7 +1389,7 @@ namespace Zoll_2015
             this.txtPackSerNum5.MaxLength = 15;
             this.txtPackSerNum5.Name = "txtPackSerNum5";
             this.txtPackSerNum5.Size = new System.Drawing.Size(112, 22);
-            this.txtPackSerNum5.TabIndex = 155;
+            this.txtPackSerNum5.TabIndex = 11;
             this.txtPackSerNum5.Text = "AV01050001";
             this.txtPackSerNum5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1408,7 +1400,7 @@ namespace Zoll_2015
             this.txtPackSerNum6.MaxLength = 15;
             this.txtPackSerNum6.Name = "txtPackSerNum6";
             this.txtPackSerNum6.Size = new System.Drawing.Size(112, 22);
-            this.txtPackSerNum6.TabIndex = 156;
+            this.txtPackSerNum6.TabIndex = 12;
             this.txtPackSerNum6.Text = "AV01050001";
             this.txtPackSerNum6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1419,7 +1411,7 @@ namespace Zoll_2015
             this.txtPackSerNum7.MaxLength = 15;
             this.txtPackSerNum7.Name = "txtPackSerNum7";
             this.txtPackSerNum7.Size = new System.Drawing.Size(112, 22);
-            this.txtPackSerNum7.TabIndex = 157;
+            this.txtPackSerNum7.TabIndex = 13;
             this.txtPackSerNum7.Text = "AV01050001";
             this.txtPackSerNum7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1430,7 +1422,7 @@ namespace Zoll_2015
             this.txtPackSerNum8.MaxLength = 15;
             this.txtPackSerNum8.Name = "txtPackSerNum8";
             this.txtPackSerNum8.Size = new System.Drawing.Size(112, 22);
-            this.txtPackSerNum8.TabIndex = 158;
+            this.txtPackSerNum8.TabIndex = 14;
             this.txtPackSerNum8.Text = "AV01050001";
             this.txtPackSerNum8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1439,7 +1431,7 @@ namespace Zoll_2015
             this.chkIDRes.Location = new System.Drawing.Point(666, 181);
             this.chkIDRes.Name = "chkIDRes";
             this.chkIDRes.Size = new System.Drawing.Size(128, 23);
-            this.chkIDRes.TabIndex = 160;
+            this.chkIDRes.TabIndex = 15;
             this.chkIDRes.Text = "Run ID Pin Test";
             this.chkIDRes.CheckedChanged += new System.EventHandler(this.chkIDRes_CheckedChanged);
             // 
@@ -1458,7 +1450,7 @@ namespace Zoll_2015
             this.txtTestTitle.Location = new System.Drawing.Point(379, 39);
             this.txtTestTitle.Name = "txtTestTitle";
             this.txtTestTitle.Size = new System.Drawing.Size(487, 27);
-            this.txtTestTitle.TabIndex = 171;
+            this.txtTestTitle.TabIndex = 0;
             this.txtTestTitle.Text = "1008-1003-01 Battery Pack Test";
             this.txtTestTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
