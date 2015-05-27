@@ -1995,7 +1995,7 @@ namespace Zoll_2015
                             strPackSerNum[i], txtPackSerNum[i].Text, lblStartDateTime.Text,
 							lblStopDateTime.Text, lblResults[i].Text, lblPreTestVtg[i].Text,
 							lblLoadVtg[i].Text, lblNoLoadVtg[i].Text, lblIDRes[i].Text,
-							strMechanicalFit[i]);		// Save the test data - rwb 5/27/2015
+							strMechanicalFit[i], txtTestTitle.Text);		// Save the test data - rwb 5/27/2015
 
                         lblTestStatus.Text = "Test Completed";    //rwb 5/27/2015
 
@@ -2102,11 +2102,12 @@ namespace Zoll_2015
 
 		/// <summary>
 		/// This method writes the test data to an Access file.
+        /// Added TestName string - rwb 5/27/2015
 		/// </summary>
 		private void SaveTestData(string PoNumber, string LotNumber, string CellDateCode,
 			string SerialNumber, string BoardSerialNumber, string StartTime, 
 			string FinishTime, string TestResult, string PreTestVoltage, string LoadVoltage,
-			string PostTestVoltage, string IDRes, string MechanicalFit)
+			string PostTestVoltage, string IDRes, string MechanicalFit, string TestName)
 		{
 			int ReturnValue = 0;
 
@@ -2118,7 +2119,7 @@ namespace Zoll_2015
 				@"Data Source=" + lblFileName.Text;
 
 			string myAddQuery = @"INSERT INTO [TestData] " +
-				@"(PoNumber, LotNumber, CellDateCode, SerialNumber, BoardSerialNumber, StartTime, FinishTime, TestResult, PreTestVoltage, LoadVoltage, PostTestVoltage, IDRes, MechanicalFit) " +
+				@"(PoNumber, LotNumber, CellDateCode, SerialNumber, BoardSerialNumber, StartTime, FinishTime, TestResult, PreTestVoltage, LoadVoltage, PostTestVoltage, IDRes, MechanicalFit, TestName) " +
 				"VALUES ( \"" + PoNumber + "\",\"" +
 				LotNumber + "\",\"" +
 				CellDateCode + "\",\"" +
@@ -2130,8 +2131,9 @@ namespace Zoll_2015
 				PreTestVoltage + "\",\"" +
 				LoadVoltage + "\",\"" +
 				PostTestVoltage + "\",\"" +
-				IDRes + "\",\"" +
-				MechanicalFit + "\")";
+                IDRes + "\",\"" +
+                MechanicalFit + "\",\"" +
+                TestName + "\")";
 
 			try
 			{
@@ -2370,7 +2372,7 @@ namespace Zoll_2015
                         strPackSerNum[i], txtPackSerNum[i].Text, lblStartDateTime.Text,
 						lblStopDateTime.Text, lblResults[i].Text, lblPreTestVtg[i].Text,
 						lblLoadVtg[i].Text, lblNoLoadVtg[i].Text, lblIDRes[i].Text,
-						strMechanicalFit[i]);		// Save the test data - rwb 5/27/2015
+						strMechanicalFit[i], txtTestTitle.Text);		// Save the test data - rwb 5/27/2015
 
 				}	//End of for (j=0; j < 4; ++j)	//Dump all the values
 
