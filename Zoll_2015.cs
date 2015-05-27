@@ -1621,7 +1621,7 @@ namespace Zoll_2015
 					strMechanicalFit[i] = "Pass";		// Set Pass if pack connected
 
 					strPackSerNum[i] = WeekYearTxt + StartSerialNum.ToString("D4");     //rwb 5/27/2015
-                    lblSerialNum[i].Text = WeekYearTxt.Remove(0,StartSerNumTxtLen - 10) + StartSerialNum.ToString("D4");
+                    lblSerialNum[i].Text = WeekYearTxt.Remove(0, StartSerNumTxtLen - 10) + StartSerialNum.ToString("D4");    //rwb 5/27/2015
                     StartSerialNum++;
 					NextStartSerialNum = StartSerialNum;
 					TestMask = (ushort)(TestMask | Bit);		// Turn on the mask bit
@@ -1969,10 +1969,10 @@ namespace Zoll_2015
 						}
 
 						SaveTestData(txtPoNumbr.Text, txtLotNum.Text, txtCellCode.Text,
-							lblSerialNum[i].Text, txtPackSerNum[i].Text, lblStartDateTime.Text,
+                            strPackSerNum[i], txtPackSerNum[i].Text, lblStartDateTime.Text,
 							lblStopDateTime.Text, lblResults[i].Text, lblPreTestVtg[i].Text,
 							lblLoadVtg[i].Text, lblNoLoadVtg[i].Text, lblIDRes[i].Text,
-							strMechanicalFit[i]);		// Save the test data
+							strMechanicalFit[i]);		// Save the test data - rwb 5/27/2015
 					}
 					break;
 
@@ -2341,10 +2341,10 @@ namespace Zoll_2015
 					lblNoLoadVtg[i].Text = IDTestVtgOc2[i,j].ToString();
 
 					SaveTestData(txtPoNumbr.Text, txtLotNum.Text, txtCellCode.Text,
-						lblSerialNum[i].Text, txtPackSerNum[i].Text, lblStartDateTime.Text,
+                        strPackSerNum[i], txtPackSerNum[i].Text, lblStartDateTime.Text,
 						lblStopDateTime.Text, lblResults[i].Text, lblPreTestVtg[i].Text,
 						lblLoadVtg[i].Text, lblNoLoadVtg[i].Text, lblIDRes[i].Text,
-						strMechanicalFit[i]);		// Save the test data
+						strMechanicalFit[i]);		// Save the test data - rwb 5/27/2015
 
 				}	//End of for (j=0; j < 4; ++j)	//Dump all the values
 
