@@ -1104,7 +1104,7 @@ namespace Zoll_2015
             this.lblEnterSerNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnterSerNum.Location = new System.Drawing.Point(16, 184);
             this.lblEnterSerNum.Name = "lblEnterSerNum";
-            this.lblEnterSerNum.Size = new System.Drawing.Size(208, 16);
+            this.lblEnterSerNum.Size = new System.Drawing.Size(200, 16);
             this.lblEnterSerNum.TabIndex = 80;
             this.lblEnterSerNum.Text = "Enter Starting Serial Number  - ";
             this.lblEnterSerNum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1112,10 +1112,10 @@ namespace Zoll_2015
             // txtStartSerNum
             // 
             this.txtStartSerNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStartSerNum.Location = new System.Drawing.Point(240, 181);
+            this.txtStartSerNum.Location = new System.Drawing.Point(219, 181);
             this.txtStartSerNum.MaxLength = 40;
             this.txtStartSerNum.Name = "txtStartSerNum";
-            this.txtStartSerNum.Size = new System.Drawing.Size(112, 22);
+            this.txtStartSerNum.Size = new System.Drawing.Size(279, 22);
             this.txtStartSerNum.TabIndex = 81;
             this.txtStartSerNum.TabStop = false;
             this.txtStartSerNum.Text = "AV01050001";
@@ -1124,9 +1124,9 @@ namespace Zoll_2015
             // 
             // btnAccept
             // 
-            this.btnAccept.Location = new System.Drawing.Point(392, 181);
+            this.btnAccept.Location = new System.Drawing.Point(504, 181);
             this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(176, 23);
+            this.btnAccept.Size = new System.Drawing.Size(149, 23);
             this.btnAccept.TabIndex = 150;
             this.btnAccept.Text = "Accept Serial Number";
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
@@ -1425,7 +1425,7 @@ namespace Zoll_2015
             // 
             // chkIDRes
             // 
-            this.chkIDRes.Location = new System.Drawing.Point(640, 181);
+            this.chkIDRes.Location = new System.Drawing.Point(666, 181);
             this.chkIDRes.Name = "chkIDRes";
             this.chkIDRes.Size = new System.Drawing.Size(128, 23);
             this.chkIDRes.TabIndex = 160;
@@ -1435,7 +1435,7 @@ namespace Zoll_2015
             // chkIDResOnly
             // 
             this.chkIDResOnly.Enabled = false;
-            this.chkIDResOnly.Location = new System.Drawing.Point(792, 181);
+            this.chkIDResOnly.Location = new System.Drawing.Point(805, 181);
             this.chkIDResOnly.Name = "chkIDResOnly";
             this.chkIDResOnly.Size = new System.Drawing.Size(160, 23);
             this.chkIDResOnly.TabIndex = 170;
