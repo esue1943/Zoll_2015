@@ -214,6 +214,7 @@ namespace Zoll_2015
 		private string StartSerNumTxt;
 		private string WeekYearTxt;
 		private System.Windows.Forms.CheckBox chkIDResOnly;
+        private TextBox txtTestTitle;
 		private string SerNumTxt;
 
 		/// <summary>
@@ -429,6 +430,7 @@ namespace Zoll_2015
             this.txtPackSerNum8 = new System.Windows.Forms.TextBox();
             this.chkIDRes = new System.Windows.Forms.CheckBox();
             this.chkIDResOnly = new System.Windows.Forms.CheckBox();
+            this.txtTestTitle = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1211,12 +1213,12 @@ namespace Zoll_2015
             // 
             // lblTestTitle
             // 
-            this.lblTestTitle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTestTitle.Location = new System.Drawing.Point(280, 40);
+            this.lblTestTitle.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestTitle.Location = new System.Drawing.Point(249, 41);
             this.lblTestTitle.Name = "lblTestTitle";
-            this.lblTestTitle.Size = new System.Drawing.Size(336, 23);
+            this.lblTestTitle.Size = new System.Drawing.Size(116, 23);
             this.lblTestTitle.TabIndex = 90;
-            this.lblTestTitle.Text = "1008-1003-01 Battery Pack Test";
+            this.lblTestTitle.Text = "Enter Test Title";
             this.lblTestTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnQuit
@@ -1450,10 +1452,21 @@ namespace Zoll_2015
             this.chkIDResOnly.TabIndex = 170;
             this.chkIDResOnly.Text = "Only Run ID Pin Test";
             // 
+            // txtTestTitle
+            // 
+            this.txtTestTitle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTestTitle.Location = new System.Drawing.Point(379, 39);
+            this.txtTestTitle.Name = "txtTestTitle";
+            this.txtTestTitle.Size = new System.Drawing.Size(487, 27);
+            this.txtTestTitle.TabIndex = 171;
+            this.txtTestTitle.Text = "1008-1003-01 Battery Pack Test";
+            this.txtTestTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Zoll_2015
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 15);
             this.ClientSize = new System.Drawing.Size(984, 635);
+            this.Controls.Add(this.txtTestTitle);
             this.Controls.Add(this.chkIDResOnly);
             this.Controls.Add(this.lblID8);
             this.Controls.Add(this.lblID7);
