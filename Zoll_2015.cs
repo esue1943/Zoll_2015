@@ -240,8 +240,8 @@ namespace Zoll_2015
 			//     MccDaq.ErrorHandling.StopAll   :if an error is encountered, the program will stop
 
 //	Comment the following 2 lines out if no hardware is attached		
-			ULStat1 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
-			ULStat2 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
+//rwb			ULStat1 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
+//rwb			ULStat2 = MccDaq.MccService.ErrHandling(MccDaq.ErrorReporting.PrintAll, MccDaq.ErrorHandling.StopAll);
 		
 			// Create a new MccBoard object for Board 1 & 2
 			DaqBoard1 = new MccDaq.MccBoard(1);
@@ -277,10 +277,10 @@ namespace Zoll_2015
 			Threshold = 11.0F;			// Set threshold voltage to 11 volts.
 
 			BoardNum = 1;		// Get board 1 serial #
-			cbGetConfig(InfoType,BoardNum, 0, ConfigType, out Board1SerialNum);
+//rwb			cbGetConfig(InfoType,BoardNum, 0, ConfigType, out Board1SerialNum);
 	
 			BoardNum = 2;		// Get board 2 serial #
-			cbGetConfig(InfoType,BoardNum, 0, ConfigType, out Board2SerialNum);
+//rwb			cbGetConfig(InfoType,BoardNum, 0, ConfigType, out Board2SerialNum);
 
 			// The relay board is connected to the miniLAB with serial Number 1
 			if(Board1SerialNum == 1)
@@ -1564,10 +1564,11 @@ namespace Zoll_2015
 		private void btnAccept_Click(object sender, System.EventArgs e)
 		{
 			int i;
+            int StartSerNumTxtLen;
 			double Test;
 			ushort Bit = 1;
 
-			if(txtStartSerNum.TextLength != 10)			// A valid serial number has 10 chars
+			if(txtStartSerNum.TextLength < 10)			// A valid serial number has atleast 10 chars - rwb 5/26/2015
 			{
 				MessageBox.Show("Not a valid serial number.", "Serial Number Entry Error",
 					MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1575,8 +1576,9 @@ namespace Zoll_2015
 			}
 
 			StartSerNumTxt = txtStartSerNum.Text;		// Grab string from message box
-			WeekYearTxt = StartSerNumTxt.Remove(6,4);	// Isolate week/year string
-			SerNumTxt = StartSerNumTxt.Remove(0,6);		// Isolate ser num string
+            StartSerNumTxtLen = StartSerNumTxt.Length;  // Find how long the serial number is - rwb 5/26/2015
+            WeekYearTxt = StartSerNumTxt.Remove(StartSerNumTxtLen - 4, 4);	// Isolate week/year string - rwb 5/26/2015
+            SerNumTxt = StartSerNumTxt.Remove(0, StartSerNumTxtLen - 4);		// Isolate ser num string - rwb 5/26/2015
 			StartSerialNum = int.Parse(SerNumTxt);		// Convert the string to int
 
 			TestMask = 0;		// Clear the test mask
@@ -1593,7 +1595,7 @@ namespace Zoll_2015
 			for (i=0; i < MaxChan; ++i)		// Look for channels with batteries connected
 			{
 				Test = Math.Abs(SaveEngUnits[i]);
-
+                Test = Threshold;           // remove this rwb 5/26/2015
 				if (Test < Threshold)
 				{
 					TestChannel[i] = false;
