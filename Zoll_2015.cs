@@ -199,6 +199,7 @@ namespace Zoll_2015
 		private float[] SaveEngUnits;
 
 		private string[] strMechanicalFit = new string[8];
+        private string[] strPackSerNum = new string[8];     //Holds complete long pack number - rwb 5/27/2015
 
 		private bool[] TestChannel = new bool[8];
 		private bool GotASerialNum = false;
@@ -530,7 +531,7 @@ namespace Zoll_2015
             this.lblSerNum1.Size = new System.Drawing.Size(112, 16);
             this.lblSerNum1.TabIndex = 36;
             this.lblSerNum1.Text = "Serial Number 1";
-            this.lblSerNum1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSerNum1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSerNum2
             // 
@@ -1611,8 +1612,9 @@ namespace Zoll_2015
 					txtPackSerNum[i].Visible = true;	// if something to test
 					strMechanicalFit[i] = "Pass";		// Set Pass if pack connected
 
-					lblSerialNum[i].Text = WeekYearTxt + StartSerialNum.ToString("D4");
-					StartSerialNum ++;
+					strPackSerNum[i] = WeekYearTxt + StartSerialNum.ToString("D4");     //rwb 5/27/2015
+                    lblSerialNum[i].Text = WeekYearTxt + StartSerialNum.ToString("D4");
+                    StartSerialNum++;
 					NextStartSerialNum = StartSerialNum;
 					TestMask = (ushort)(TestMask | Bit);		// Turn on the mask bit
 				}
