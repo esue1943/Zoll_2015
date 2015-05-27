@@ -1113,12 +1113,14 @@ namespace Zoll_2015
             // 
             this.txtStartSerNum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStartSerNum.Location = new System.Drawing.Point(240, 181);
-            this.txtStartSerNum.MaxLength = 15;
+            this.txtStartSerNum.MaxLength = 40;
             this.txtStartSerNum.Name = "txtStartSerNum";
             this.txtStartSerNum.Size = new System.Drawing.Size(112, 22);
             this.txtStartSerNum.TabIndex = 81;
             this.txtStartSerNum.TabStop = false;
             this.txtStartSerNum.Text = "AV01050001";
+            this.txtStartSerNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtStartSerNum.TextChanged += new System.EventHandler(this.txtStartSerNum_TextChanged);
             // 
             // btnAccept
             // 
@@ -2357,6 +2359,11 @@ namespace Zoll_2015
 		}
 
         private void Zoll_2015_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStartSerNum_TextChanged(object sender, EventArgs e)
         {
 
         }
